@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { translate, type Lang } from "./i18n";
 
 const ACCENT = "#C6F24E";
@@ -32,6 +32,47 @@ export function useLanding() {
   const [mapHold, setMapHold] = useState(false);
   const holdRef = useRef(false);
   const stepTimer = useRef<number>();
+
+  // draggable partner map: the layer is 140% of the frame, so it can pan 20% each way
+  const mapRef = useRef<HTMLDivElement>(null);
+  const pan = useRef({ x: 0, y: 0 });
+  const drag = useRef<{ id: number; sx: number; sy: number; ox: number; oy: number } | null>(null);
+  const applyPan = () => {
+    const el = mapRef.current;
+    if (el) el.style.transform = `translate3d(${pan.current.x}px, ${pan.current.y}px, 0)`;
+  };
+  const mapDrag = {
+    onPointerDown: (e: React.PointerEvent<HTMLDivElement>) => {
+      if (e.pointerType === "mouse" && e.button !== 0) return;
+      e.currentTarget.setPointerCapture(e.pointerId);
+      e.currentTarget.classList.add("dragging");
+      drag.current = { id: e.pointerId, sx: e.clientX, sy: e.clientY, ox: pan.current.x, oy: pan.current.y };
+    },
+    onPointerMove: (e: React.PointerEvent<HTMLDivElement>) => {
+      const d = drag.current;
+      if (!d || d.id !== e.pointerId) return;
+      const el = e.currentTarget;
+      const mx = el.offsetWidth / 7; // 20% of the frame = 1/7 of a 140% layer
+      const my = el.offsetHeight / 7;
+      pan.current = {
+        x: Math.max(-mx, Math.min(mx, d.ox + e.clientX - d.sx)),
+        y: Math.max(-my, Math.min(my, d.oy + e.clientY - d.sy)),
+      };
+      applyPan();
+    },
+    onPointerUp: (e: React.PointerEvent<HTMLDivElement>) => {
+      drag.current = null;
+      e.currentTarget.classList.remove("dragging");
+    },
+    onPointerCancel: (e: React.PointerEvent<HTMLDivElement>) => {
+      drag.current = null;
+      e.currentTarget.classList.remove("dragging");
+    },
+    onDoubleClick: () => {
+      pan.current = { x: 0, y: 0 };
+      applyPan();
+    },
+  };
 
   const t = useMemo(() => translate(lang), [lang]);
 
@@ -133,6 +174,8 @@ export function useLanding() {
 
   const v = {
     accent: ACCENT,
+    mapRef,
+    mapDrag,
     lang,
     setLang: (l: Lang) => setLangState(l),
     rootCls: "cc-root" + (dark ? " dark" : ""),
