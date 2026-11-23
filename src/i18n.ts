@@ -142,6 +142,9 @@ export const AZ: Record<string, string> = {
   "Share history by QR": "Tarixçəni QR ilə paylaş",
   "A buyer or mechanic scans it and gets the full history file.": "Alıcı və ya usta skan edib tam tarixçə faylını alır.",
   "Share": "Paylaş",
+  "A buyer or mechanic scans it and gets this report as a PDF.": "Alıcı və ya usta skan edib bu hesabatı PDF kimi alır.",
+  "Open sample": "Nümunəyə bax",
+  "PDF · 3 pages · sample": "PDF · 3 səhifə · nümunə",
   // dynamic labels
   "Drag to explore": "Sürüşdürərək baxın",
   "Add car": "Avtomobil",
