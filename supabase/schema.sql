@@ -102,3 +102,22 @@ drop policy if exists "media admin write" on storage.objects;
 create policy "media admin write" on storage.objects for all
   using (bucket_id = 'media' and public.is_admin())
   with check (bucket_id = 'media' and public.is_admin());
+
+-- Admin allowlist: accounts with these emails become admins on creation.
+create table if not exists public.admin_emails (email text primary key);
+alter table public.admin_emails enable row level security;
+insert into public.admin_emails (email) values ('askerova986@gmail.com'), ('mirzayev.ne@gmail.com') on conflict do nothing;
+
+create or replace function public.grant_admin_on_signup() returns trigger
+language plpgsql security definer set search_path = public as $$
+begin
+  if exists (select 1 from public.admin_emails where lower(email) = lower(new.email)) then
+    insert into public.admins (user_id, email) values (new.id, new.email) on conflict do nothing;
+  end if;
+  return new;
+end $$;
+
+drop trigger if exists on_auth_user_created_admin on auth.users;
+create trigger on_auth_user_created_admin after insert on auth.users
+  for each row execute function public.grant_admin_on_signup();
+revoke execute on function public.grant_admin_on_signup() from public, anon, authenticated;
