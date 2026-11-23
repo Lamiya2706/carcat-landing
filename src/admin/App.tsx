@@ -178,15 +178,27 @@ function Shell({ email }: { email: string }) {
   const [tab, setTab] = useState(tabFromHash);
   const [nav, setNav] = useState(false);
   useEffect(() => {
-    const on = () => setTab(tabFromHash());
+    const on = () => {
+      setTab(tabFromHash());
+      setNav(false);
+    };
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setNav(false);
     window.addEventListener("hashchange", on);
-    return () => window.removeEventListener("hashchange", on);
+    window.addEventListener("keydown", onKey);
+    return () => {
+      window.removeEventListener("hashchange", on);
+      window.removeEventListener("keydown", onKey);
+    };
   }, []);
   const Page = TABS.find((t) => t.id === tab)!.el;
   return (
     <div className="ad-shell">
+      {nav && <div className="ad-side-bg" onClick={() => setNav(false)} aria-hidden="true" />}
       <aside className={"ad-side" + (nav ? " open" : "")}>
-        <a href={SITE} target="_blank" rel="noreferrer" className="ad-brand"><img src={logo} alt="CarCat" /><span>Admin</span></a>
+        <div className="ad-side-top">
+          <a href={SITE} target="_blank" rel="noreferrer" className="ad-brand"><img src={logo} alt="CarCat" /><span>Admin</span></a>
+          <button type="button" className="ad-x ad-side-close" aria-label="Close menu" onClick={() => setNav(false)}>×</button>
+        </div>
         <nav>
           {TABS.map((t) => (
             <a key={t.id} href={"#" + t.id} className={tab === t.id ? "on" : ""} onClick={() => setNav(false)}>
@@ -203,7 +215,7 @@ function Shell({ email }: { email: string }) {
       </aside>
       <div className="ad-main">
         <header className="ad-top">
-          <button type="button" className="ad-burger" aria-label="Menu" onClick={() => setNav((n) => !n)}>☰</button>
+          <button type="button" className="ad-burger" aria-label="Open menu" aria-expanded={nav} onClick={() => setNav(true)}>☰</button>
           <span className="ad-top-title">{TABS.find((t) => t.id === tab)!.label}</span>
           <Publish />
         </header>
