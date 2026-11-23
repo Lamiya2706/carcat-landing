@@ -249,7 +249,7 @@ a{color:#111111}a:hover{color:#444444}
 
 /* service centers band: roomier on phones */
 @media (max-width:760px){
-  .ct-sec{padding:0 12px!important}
+  .ct-sec{padding:42px 12px!important}
   .ct-card{padding:36px 22px!important;border-radius:28px!important;gap:28px!important}
   .ct-copy,.ct-list{flex:1 1 100%!important}
   .ct-h{font-size:clamp(28px,8.4vw,34px)!important;line-height:1.12!important}
