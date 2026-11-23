@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "node scripts/text-keys.mjs && tsc -b && vite build && vite build --ssr src/entry-server.tsx --outDir dist-ssr && node scripts/prerender.mjs",
     "preview": "vite preview",
-    "content": "node scripts/fetch-content.mjs && node scripts/text-keys.mjs"
+    "content": "node scripts/fetch-content.mjs && node scripts/text-keys.mjs",
+    "build:fast": "node scripts/text-keys.mjs && vite build && vite build --ssr src/entry-server.tsx --outDir dist-ssr && node scripts/prerender.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.119.2",

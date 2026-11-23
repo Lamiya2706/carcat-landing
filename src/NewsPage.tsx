@@ -18,8 +18,10 @@ function NewsCard({ n, lang }: { n: NewsItem; lang: Lang }) {
 }
 
 export default function NewsPage({ slug }: { slug: string }) {
-  const item = NEWS.find((n) => n.slug === slug)!;
+  const item = NEWS.find((n) => n.slug === slug);
   useEffect(() => window.scrollTo(0, 0), [slug]);
+  // a post unpublished since this page was built
+  if (!item) return <NewsIndex />;
   return (
     <Shell title={`${item.az.title} — CarCat`}>
       {({ v, t }) => {

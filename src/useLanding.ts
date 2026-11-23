@@ -1,9 +1,9 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { translate, type Lang } from "./i18n";
-import { CENTERS } from "./content";
+import { CENTERS, onContentChange } from "./content";
+import { loadLiveContent } from "./live";
 
 const ACCENT = "#C6F24E";
-const MAP_KEYS = CENTERS.map((c) => c.id);
 const STEP_LABELS = ["Add car", "Schedule", "Find a center", "Book a service"];
 
 const readPref = <T extends string>(key: string, fallback: T, allowed: readonly T[]): T => {
@@ -29,6 +29,13 @@ export function useLanding() {
   const [dark, setDark] = useState(() => readPref("cc-theme", "light", ["light", "dark"] as const) === "dark");
   const [lang, setLangState] = useState<Lang>(() => readPref<Lang>("cc-lang", "az", ["en", "az"]));
   const [menu, setMenu] = useState(false);
+  // re-render when freshly published content arrives
+  const [contentRev, setContentRev] = useState(0);
+  useEffect(() => onContentChange(() => setContentRev((n) => n + 1)), []);
+  useEffect(() => loadLiveContent(), []);
+  const MAP_KEYS = CENTERS.map((c) => c.id);
+  const mapKeysRef = useRef(MAP_KEYS);
+  mapKeysRef.current = MAP_KEYS;
   const [mapBrand, setMapBrand] = useState<string>(MAP_KEYS[0] ?? "");
   const [mapHold, setMapHold] = useState(false);
   const holdRef = useRef(false);
@@ -87,7 +94,8 @@ export function useLanding() {
     },
   };
 
-  const t = useMemo(() => translate(lang), [lang]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const t = useMemo(() => translate(lang), [lang, contentRev]);
 
   // hero steps every 3.6s
   const startSteps = useCallback(() => {
@@ -103,7 +111,8 @@ export function useLanding() {
   useEffect(() => {
     const id = window.setInterval(() => {
       if (holdRef.current) return;
-      if (MAP_KEYS.length) setMapBrand((cur) => MAP_KEYS[(MAP_KEYS.indexOf(cur) + 1) % MAP_KEYS.length]);
+      const keys = mapKeysRef.current;
+      if (keys.length) setMapBrand((cur) => keys[(keys.indexOf(cur) + 1) % keys.length]);
     }, 10000);
     return () => window.clearInterval(id);
   }, []);

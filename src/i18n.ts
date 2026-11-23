@@ -138,8 +138,9 @@ export const AZ: Record<string, string> = {
   "our partners": "tərəfdaşlarımız",
 };
 
-const OVR = CONTENT.texts;
 
 /** Admin overrides win, then the built-in Azerbaijani copy, then the English source string. */
-export const translate = (lang: Lang) => (s: string) =>
-  lang === "az" ? OVR[s]?.az || (s in AZ ? AZ[s] : OVR[s]?.en || s) : OVR[s]?.en || s;
+export const translate = (lang: Lang) => (s: string) => {
+  const o = CONTENT.texts[s];
+  return lang === "az" ? o?.az || (s in AZ ? AZ[s] : o?.en || s) : o?.en || s;
+};

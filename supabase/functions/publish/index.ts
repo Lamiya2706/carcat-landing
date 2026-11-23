@@ -29,6 +29,10 @@ Deno.serve(async (req) => {
   const { action } = await req.json().catch(() => ({ action: "status" }));
 
   if (action === "publish") {
+    // 1) freeze content: visitors get it on their next page load, within seconds
+    const { error: snapErr } = await db.rpc("publish_snapshot");
+    if (snapErr) return json({ error: "Could not save the published snapshot: " + snapErr.message }, 500);
+    // 2) rebuild the static pages for Google and link previews
     const r = await gh(`/actions/workflows/${WORKFLOW}/dispatches`, { method: "POST", body: JSON.stringify({ ref: "main" }) });
     if (!r.ok) return json({ error: `GitHub ${r.status}: ${await r.text()}` }, 502);
     await db.from("settings").upsert({ key: "last_publish", value: new Date().toISOString(), updated_at: new Date().toISOString() });

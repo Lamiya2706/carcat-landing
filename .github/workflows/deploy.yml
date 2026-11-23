@@ -15,15 +15,25 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build:
+  # One job (build + deploy) saves a second runner start-up on every publish.
+  deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: npm
-      - run: npm ci
+      - name: Cache node_modules
+        id: deps
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: deps-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+      - if: steps.deps.outputs.cache-hit != 'true'
+        run: npm ci --no-audit --no-fund
       # Custom domain: set the repository variable CUSTOM_DOMAIN (e.g. carcat.app) once DNS points to GitHub Pages.
       - name: Configure base path and site URL
         run: |
@@ -34,22 +44,17 @@ jobs:
             echo "BASE_PATH=/carcat-landing/" >> "$GITHUB_ENV"
             echo "SITE_URL=https://lamiya2706.github.io/carcat-landing" >> "$GITHUB_ENV"
           fi
-      - name: Pull latest content from Supabase
+      - name: Pull published content from Supabase
         run: node scripts/fetch-content.mjs
-      - run: npm run build
+      # Type-checking runs only on code pushes; a content publish skips it.
+      - if: github.event_name == 'push'
+        run: npx tsc -b
+      - run: npm run build:fast
       - name: Add CNAME for custom domain
         if: ${{ vars.CUSTOM_DOMAIN != '' }}
         run: echo "${{ vars.CUSTOM_DOMAIN }}" > dist/CNAME
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
       - id: deployment
         uses: actions/deploy-pages@v4

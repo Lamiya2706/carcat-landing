@@ -1,4 +1,4 @@
-import { CONTENT, formatDate, media } from "./content";
+import { CONTENT, formatDate, media, onContentChange } from "./content";
 
 export type NewsItem = {
   slug: string;
@@ -12,7 +12,7 @@ export type NewsItem = {
 };
 
 // Order matches the homepage carousel (admin "sort"); unpublished posts are left out entirely.
-export const NEWS: NewsItem[] = CONTENT.news
+const build = (): NewsItem[] => CONTENT.news
   .filter((n) => n.published)
   .sort((a, b) => a.sort - b.sort)
   .map((n) => ({
@@ -24,6 +24,8 @@ export const NEWS: NewsItem[] = CONTENT.news
     en: { ...n.en, date: formatDate(n.date, "en") },
     az: { ...n.az, date: formatDate(n.date, "az") },
   }));
+export let NEWS: NewsItem[] = build();
+onContentChange(() => (NEWS = build()));
 
 export const newsUrl = (slug: string) => `${import.meta.env.BASE_URL}news/${slug}/`;
 
