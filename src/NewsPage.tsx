@@ -28,9 +28,9 @@ export default function NewsPage({ slug }: { slug: string }) {
         return (
           <>
             <article className="nd-wrap nd-article">
-              <a href={home + "news/"} className="nd-back">
+              <a href={home + "#news"} className="nd-back">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6" /></svg>
-                {t("All news")}
+                {t("Back")}
               </a>
               <span className="nd-kicker">
                 {t("Newsroom")} · <time dateTime={new Date(item.en.date + " UTC").toISOString().slice(0, 10)}>{c.date}</time>

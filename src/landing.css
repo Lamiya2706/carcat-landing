@@ -329,3 +329,4 @@ a{color:#111111}a:hover{color:#444444}
 .nd-legal p,.nd-legal li{margin:0;font-size:16px;line-height:1.65;color:var(--ink2)}
 .nd-legal ul{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:4px}
 .nd-legal a{color:var(--ink)}
+.ft-share{flex-wrap:wrap}.ft-share>span:nth-child(2){flex:1 1 160px!important}@media (max-width:640px){.ft-merged .ft-a-hist{padding:20px!important;gap:20px!important}.ft-merged .ft-a-hist>div:last-child{padding:10px!important}.ft-share>a{flex:1 1 100%!important;justify-content:center;padding:10px 12px!important}.ft-preview{height:170px!important}}

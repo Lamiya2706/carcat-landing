@@ -149,6 +149,7 @@ export const AZ: Record<string, string> = {
   "More news": "Digər xəbərlər",
   "Privacy Policy": "Məxfilik siyasəti",
   "Terms of Service": "İstifadə şərtləri",
+  "Back": "Geri",
   // dynamic labels
   "Drag to explore": "Sürüşdürərək baxın",
   "Add car": "Avtomobil",
