@@ -205,18 +205,6 @@ export default function App() {
           ))}
         </div>
       </div>
-      <div className="lg-block">
-        <h2 className="lg-title">{t("Working with")} <span className="lg-hl">{t("our partners")}</span></h2>
-        <div className="pt-marquee">
-          <div className="pt-track">
-            {[...TRUST[1].items, ...TRUST[1].items].map((it, k) => (
-              <a key={it.name + k} href={it.url} target="_blank" rel="noopener noreferrer" className={"lg-tile pt-tile" + (it.tall ? " tall" : "")} aria-label={it.name} title={it.name} aria-hidden={k >= TRUST[1].items.length ? true : undefined} tabIndex={k >= TRUST[1].items.length ? -1 : undefined}>
-                <img loading="lazy" decoding="async" src={it.logo} alt={k >= TRUST[1].items.length ? "" : it.name} />
-              </a>
-            ))}
-          </div>
-        </div>
-      </div>
       </div></div>
 </section>
 
@@ -255,7 +243,7 @@ export default function App() {
 
       <article style={{flex: "1 1 320px", minWidth: "0", background: "var(--card)", borderRadius: "28px", padding: "28px", display: "flex", flexDirection: "column", gap: "20px"}}>
       <div style={{height: "240px", borderRadius: "20px", background: "var(--t-blue)", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden"}}>
-      <div style={{width: "250px", background: "var(--card)", borderRadius: "20px", padding: "16px", boxSizing: "border-box", display: "flex", flexDirection: "column", gap: "12px", boxShadow: "0 20px 40px -24px rgba(29,78,216,0.5)"}}>
+      <div style={{width: "250px", background: "var(--card)", borderRadius: "20px", padding: "16px", boxSizing: "border-box", display: "flex", flexDirection: "column", gap: "12px", boxShadow: "var(--glow-blue)"}}>
       <div style={{display: "flex", alignItems: "center", justifyContent: "space-between"}}><span style={{fontWeight: "800", fontFamily: "Manrope, Inter, sans-serif", fontSize: "15px"}}>{t("Engine oil & filter")}</span><span className="hw-bell" style={{width: "30px", height: "30px", borderRadius: "50%", background: "var(--t-yellow)", display: "flex", alignItems: "center", justifyContent: "center"}}><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#7A5B00" strokeWidth="2" aria-hidden="true"><path d="M6 8a6 6 0 1 1 12 0c0 7 3 8 3 8H3s3-1 3-8"></path><path d="M10 20a2 2 0 0 0 4 0"></path></svg></span></div>
       <div style={{height: "10px", borderRadius: "999px", background: "var(--soft3)", overflow: "hidden"}}><span className="hw-fill" style={{display: "block", height: "100%", borderRadius: "999px", background: "#3B82F6"}}></span></div>
       <div style={{display: "flex", justifyContent: "space-between", fontSize: "11px", color: "var(--ink2)"}}><span>{t("118 400 km")}</span><span>{t("126 800 km")}</span></div>
@@ -269,7 +257,7 @@ export default function App() {
 
       <article style={{flex: "1 1 320px", minWidth: "0", background: "var(--card)", borderRadius: "28px", padding: "28px", display: "flex", flexDirection: "column", gap: "20px"}}>
       <div style={{height: "240px", borderRadius: "20px", background: "var(--t-peach)", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden"}}>
-      <div style={{width: "258px", background: "var(--card)", borderRadius: "20px", padding: "16px", boxSizing: "border-box", display: "flex", flexDirection: "column", gap: "12px", boxShadow: "0 20px 40px -24px rgba(194,65,12,0.5)"}}>
+      <div style={{width: "258px", background: "var(--card)", borderRadius: "20px", padding: "16px", boxSizing: "border-box", display: "flex", flexDirection: "column", gap: "12px", boxShadow: "var(--glow-orange)"}}>
       <div style={{display: "flex", flexDirection: "column", lineHeight: "1.3"}}><span style={{fontSize: "14px", fontWeight: "800"}}>{t("HyperServis")}</span><span style={{fontSize: "11px", color: "var(--muted)"}}>{t("Saturday, 22 November")}</span></div>
       <div style={{position: "relative", width: "226px", height: "68px"}}>
       <span style={{position: "absolute", left: "0px", top: "0px", width: "70px", height: "30px", borderRadius: "999px", background: "var(--soft2)"}}></span>
@@ -283,7 +271,7 @@ export default function App() {
       <span style={{position: "absolute", left: "78px", top: "0px", width: "70px", height: "30px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "12px", fontWeight: "600", color: "var(--ink2)", zIndex: "1"}}>{t("10:00")}</span>
       <span style={{position: "absolute", left: "156px", top: "0px", width: "70px", height: "30px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "12px", fontWeight: "600", color: "var(--ink2)", zIndex: "1"}}>{t("11:30")}</span>
       <span style={{position: "absolute", left: "0px", top: "38px", width: "70px", height: "30px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "12px", fontWeight: "600", color: "var(--ink2)", zIndex: "1"}}>{t("13:00")}</span>
-      <span style={{position: "absolute", left: "78px", top: "38px", width: "70px", height: "30px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "12px", fontWeight: "600", color: "var(--ink2)", zIndex: "1"}}>{t("15:00")}</span>
+      <span style={{position: "absolute", left: "78px", top: "38px", width: "70px", height: "30px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "12px", fontWeight: "700", color: "#111111", zIndex: "1"}}>{t("15:00")}</span>
       <span style={{position: "absolute", left: "156px", top: "38px", width: "70px", height: "30px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "12px", fontWeight: "600", color: "var(--ink2)", zIndex: "1"}}>{t("16:30")}</span>
       </div>
       <div style={{position: "relative", height: "38px"}}>
@@ -402,6 +390,24 @@ export default function App() {
       </div>
       </div>
       </section>
+<section id="partners-logos" aria-label="Partners" style={{background: "var(--soft)", borderTop: "1px solid var(--line)"}}>
+<div style={{maxWidth: "1200px", margin: "0 auto", padding: "42px 24px"}}>
+<div className="lg-groups">
+      <div className="lg-block">
+        <h2 className="lg-title">{t("Working with")} <span className="lg-hl">{t("our partners")}</span></h2>
+        <div className="pt-marquee">
+          <div className="pt-track">
+            {[...TRUST[1].items, ...TRUST[1].items].map((it, k) => (
+              <a key={it.name + k} href={it.url} target="_blank" rel="noopener noreferrer" className={"lg-tile pt-tile" + (it.tall ? " tall" : "")} aria-label={it.name} title={it.name} aria-hidden={k >= TRUST[1].items.length ? true : undefined} tabIndex={k >= TRUST[1].items.length ? -1 : undefined}>
+                <img loading="lazy" decoding="async" src={it.logo} alt={k >= TRUST[1].items.length ? "" : it.name} />
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+</div>
+</div>
+</section>
 
       {/* INSTAGRAM */}
       <section id="instagram-feed" className={v.rv_insta} data-rv="insta" aria-label="CarCat on Instagram" style={{order: "1"}}>
