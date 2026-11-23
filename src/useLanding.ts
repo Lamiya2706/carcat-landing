@@ -1,8 +1,9 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { translate, type Lang } from "./i18n";
+import { CENTERS } from "./content";
 
 const ACCENT = "#C6F24E";
-const MAP_KEYS = ["hyper", "continental", "castrol", "kia"] as const;
+const MAP_KEYS = CENTERS.map((c) => c.id);
 const STEP_LABELS = ["Add car", "Schedule", "Find a center", "Book a service"];
 
 const readPref = <T extends string>(key: string, fallback: T, allowed: readonly T[]): T => {
@@ -28,7 +29,7 @@ export function useLanding() {
   const [dark, setDark] = useState(() => readPref("cc-theme", "light", ["light", "dark"] as const) === "dark");
   const [lang, setLangState] = useState<Lang>(() => readPref<Lang>("cc-lang", "en", ["en", "az"]));
   const [menu, setMenu] = useState(false);
-  const [mapBrand, setMapBrand] = useState<(typeof MAP_KEYS)[number]>("hyper");
+  const [mapBrand, setMapBrand] = useState<string>(MAP_KEYS[0] ?? "");
   const [mapHold, setMapHold] = useState(false);
   const holdRef = useRef(false);
   const stepTimer = useRef<number>();
@@ -102,7 +103,7 @@ export function useLanding() {
   useEffect(() => {
     const id = window.setInterval(() => {
       if (holdRef.current) return;
-      setMapBrand((cur) => MAP_KEYS[(MAP_KEYS.indexOf(cur) + 1) % MAP_KEYS.length]);
+      if (MAP_KEYS.length) setMapBrand((cur) => MAP_KEYS[(MAP_KEYS.indexOf(cur) + 1) % MAP_KEYS.length]);
     }, 10000);
     return () => window.clearInterval(id);
   }, []);
@@ -174,15 +175,15 @@ export function useLanding() {
       setMapHold(false);
     },
   };
-  MAP_KEYS.forEach((k) => {
-    mapVals["pc_" + k] = "mp-pin" + (mapBrand === k ? " on" : " off");
-    mapVals["cc_" + k] = "mp-card" + (mapBrand === k ? " on" : " dim") + (mapHold ? " hold" : "");
-    mapVals["hv_" + k] = () => {
-      holdRef.current = true;
-      setMapHold(true);
-      setMapBrand(k);
-    };
-  });
+  const pc = (k: string) => "mp-pin" + (mapBrand === k ? " on" : " off");
+  const cc = (k: string) => "mp-card" + (mapBrand === k ? " on" : " dim") + (mapHold ? " hold" : "");
+  const hv = (k: string) => () => {
+    holdRef.current = true;
+    setMapHold(true);
+    setMapBrand(k);
+  };
+  Object.assign(mapVals, { pc, cc, hv });
+  const locCount = (n: number) => (lang === "az" ? `${n} ünvan` : `${n} location${n === 1 ? "" : "s"}`);
 
   const v = {
     accent: ACCENT,
@@ -232,6 +233,7 @@ export function useLanding() {
         startSteps();
       },
     })),
+    locCount,
     ...mapVals,
   } as Record<string, any>;
 

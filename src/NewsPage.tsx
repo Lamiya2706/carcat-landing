@@ -33,7 +33,7 @@ export default function NewsPage({ slug }: { slug: string }) {
                 {t("Back")}
               </a>
               <span className="nd-kicker">
-                {t("Newsroom")} · <time dateTime={new Date(item.en.date + " UTC").toISOString().slice(0, 10)}>{c.date}</time>
+                {t("Newsroom")} · <time dateTime={item.iso}>{c.date}</time>
               </span>
               <h1>{c.title}</h1>
               <p className="nd-lead">{c.lead}</p>
@@ -69,7 +69,7 @@ export default function NewsPage({ slug }: { slug: string }) {
 }
 
 export function NewsIndex() {
-  const sorted = [...NEWS].sort((a, b) => +new Date(b.en.date) - +new Date(a.en.date));
+  const sorted = [...NEWS].sort((a, b) => b.iso.localeCompare(a.iso));
   return (
     <Shell title="News — CarCat">
       {({ v, t }) => (

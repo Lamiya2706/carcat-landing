@@ -71,13 +71,15 @@ write("", page({
 }));
 
 // News articles
+// Share image: a prepared 1200x630 card in public/og if there is one, otherwise the post's own cover.
+const ogFor = (n) => fs.existsSync(path.resolve("public/og", `${n.slug}.jpg`)) ? abs(`og/${n.slug}.jpg`) : (/^https?:/.test(n.image) ? n.image : abs(n.image.slice(base.length)));
 for (const n of NEWS) {
   const route = `news/${n.slug}/`;
   write(route, page({
-    route, title: `${n.en.title} — CarCat`, description: n.en.lead, image: abs(`og/${n.slug}.jpg`), type: "article",
+    route, title: `${n.en.title} — CarCat`, description: n.en.lead, image: ogFor(n), type: "article",
     html: render("/" + route),
-    jsonld: [org, { "@type": "NewsArticle", headline: n.en.title, description: n.en.lead, image: [abs(`og/${n.slug}.jpg`)],
-      datePublished: toIso(n.en.date), dateModified: toIso(n.en.date), inLanguage: "en",
+    jsonld: [org, { "@type": "NewsArticle", headline: n.en.title, description: n.en.lead, image: [ogFor(n)],
+      datePublished: n.iso, dateModified: n.iso, inLanguage: "en",
       mainEntityOfPage: abs(route), author: { "@id": abs("#org") }, publisher: { "@id": abs("#org") } }],
   }));
 }
@@ -97,7 +99,7 @@ for (const [route, title, description] of [
 
 // sitemap + robots
 const today = new Date().toISOString().slice(0, 10);
-const urls = [{ loc: abs(""), lastmod: today, pri: "1.0" }, { loc: abs("news/"), lastmod: today, pri: "0.6" }, { loc: abs("privacy-policy/"), lastmod: "2025-12-25", pri: "0.3" }, { loc: abs("terms-of-service/"), lastmod: "2025-12-25", pri: "0.3" }, ...NEWS.map((n) => ({ loc: abs(`news/${n.slug}/`), lastmod: toIso(n.en.date), pri: "0.7" }))];
+const urls = [{ loc: abs(""), lastmod: today, pri: "1.0" }, { loc: abs("news/"), lastmod: today, pri: "0.6" }, { loc: abs("privacy-policy/"), lastmod: "2025-12-25", pri: "0.3" }, { loc: abs("terms-of-service/"), lastmod: "2025-12-25", pri: "0.3" }, ...NEWS.map((n) => ({ loc: abs(`news/${n.slug}/`), lastmod: n.iso, pri: "0.7" }))];
 fs.writeFileSync(path.join(dist, "sitemap.xml"),
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
   urls.map((u) => `  <url><loc>${u.loc}</loc><lastmod>${u.lastmod}</lastmod><priority>${u.pri}</priority></url>`).join("\n") + `\n</urlset>\n`);
