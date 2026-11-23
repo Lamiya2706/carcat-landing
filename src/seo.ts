@@ -2,9 +2,9 @@
 export const SITE = {
   name: "CarCat",
   legalName: "CARCAT MMC",
-  title: "CarCat — car maintenance, service booking and full service history",
+  title: "CarCat — avtomobil baxımı, servisə yazılış və tam servis tarixçəsi",
   description:
-    "Your car's maintenance plan, service bookings and full service history in one simple app. Book partner service centers in Baku.",
+    "Avtomobilinizin texniki baxım planı, servis rezervləri və bütün tarixçəsi — hamısı bir sadə tətbiqdə. Bakıda tərəfdaş servis mərkəzlərinə onlayn yazılın.",
   phone: "+994705757570",
   email: "nemat.mirzayev@carcat.app",
   appStore: "https://apps.apple.com/gb/app/carcat-auto-services/id6756967222",

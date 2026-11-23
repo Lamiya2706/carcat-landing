@@ -26,7 +26,7 @@ export function useLanding() {
   const [step, setStep] = useState(0);
   const [seen, setSeen] = useState<Record<string, boolean>>({});
   const [dark, setDark] = useState(() => readPref("cc-theme", "light", ["light", "dark"] as const) === "dark");
-  const [lang, setLangState] = useState<Lang>(() => readPref<Lang>("cc-lang", "en", ["en", "az"]));
+  const [lang, setLangState] = useState<Lang>(() => readPref<Lang>("cc-lang", "az", ["en", "az"]));
   const [menu, setMenu] = useState(false);
   const [mapBrand, setMapBrand] = useState<(typeof MAP_KEYS)[number]>("hyper");
   const [mapHold, setMapHold] = useState(false);

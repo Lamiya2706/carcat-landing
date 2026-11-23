@@ -21,7 +21,7 @@ export default function NewsPage({ slug }: { slug: string }) {
   const item = NEWS.find((n) => n.slug === slug)!;
   useEffect(() => window.scrollTo(0, 0), [slug]);
   return (
-    <Shell title={`${item.en.title} — CarCat`}>
+    <Shell title={`${item.az.title} — CarCat`}>
       {({ v, t }) => {
         const lang = v.lang as Lang;
         const c = item[lang];
@@ -71,7 +71,7 @@ export default function NewsPage({ slug }: { slug: string }) {
 export function NewsIndex() {
   const sorted = [...NEWS].sort((a, b) => +new Date(b.en.date) - +new Date(a.en.date));
   return (
-    <Shell title="News — CarCat">
+    <Shell title="Xəbərlər — CarCat">
       {({ v, t }) => (
         <section className="nd-wrap nd-index">
           <span className="nd-kicker">{t("Newsroom")}</span>

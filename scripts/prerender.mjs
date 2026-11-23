@@ -34,8 +34,8 @@ function page({ route, title, description, image, type, jsonld, html }) {
     `<meta property="og:image" content="${image}" />`,
     `<meta property="og:image:width" content="1200" />`,
     `<meta property="og:image:height" content="630" />`,
-    `<meta property="og:locale" content="en_US" />`,
-    `<meta property="og:locale:alternate" content="az_AZ" />`,
+    `<meta property="og:locale" content="az_AZ" />`,
+    `<meta property="og:locale:alternate" content="en_US" />`,
     `<meta name="twitter:card" content="summary_large_image" />`,
     `<meta name="twitter:title" content="${esc(title)}" />`,
     `<meta name="twitter:description" content="${esc(description)}" />`,
@@ -74,17 +74,17 @@ write("", page({
 for (const n of NEWS) {
   const route = `news/${n.slug}/`;
   write(route, page({
-    route, title: `${n.en.title} — CarCat`, description: n.en.lead, image: abs(`og/${n.slug}.jpg`), type: "article",
+    route, title: `${n.az.title} — CarCat`, description: n.az.lead, image: abs(`og/${n.slug}.jpg`), type: "article",
     html: render("/" + route),
-    jsonld: [org, { "@type": "NewsArticle", headline: n.en.title, description: n.en.lead, image: [abs(`og/${n.slug}.jpg`)],
-      datePublished: toIso(n.en.date), dateModified: toIso(n.en.date), inLanguage: "en",
+    jsonld: [org, { "@type": "NewsArticle", headline: n.az.title, description: n.az.lead, image: [abs(`og/${n.slug}.jpg`)],
+      datePublished: toIso(n.en.date), dateModified: toIso(n.en.date), inLanguage: "az",
       mainEntityOfPage: abs(route), author: { "@id": abs("#org") }, publisher: { "@id": abs("#org") } }],
   }));
 }
 
 // News index + legal pages (legal URLs match the previous carcat.app site, so app-store links keep working)
 write("news/", page({
-  route: "news/", title: "News — CarCat", description: "Latest news from CarCat: awards, partnerships and product updates.",
+  route: "news/", title: "Xəbərlər — CarCat", description: "CarCat-dan son xəbərlər: mükafatlar, tərəfdaşlıqlar və tətbiq yenilikləri.",
   image: abs("og/home.jpg"), type: "website", html: render("/news/"),
   jsonld: [org, { "@type": "CollectionPage", name: "CarCat news", url: abs("news/") }],
 }));
