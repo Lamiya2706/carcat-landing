@@ -365,3 +365,4 @@ a.mp-tag:hover{border-color:#C6F24E!important}
 @media (max-width:980px){.sp-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media (max-width:640px){.lg-title{font-size:30px}.sp-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.sp-tile{height:96px;padding:14px}.sp-tile img{max-height:56px}.pt-tile{width:132px!important;height:80px!important}.lg-groups{gap:40px}}
 @media (max-width:640px){.sp-grid>.sp-tile:last-child:nth-child(odd){grid-column:1 / -1;justify-self:center;width:calc(50% - 6px)}}
+#how>div{gap:32px!important}#how .ft-merged{margin-top:-8px}
