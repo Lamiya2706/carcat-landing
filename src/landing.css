@@ -267,3 +267,6 @@ a{color:#111111}a:hover{color:#444444}
 
 /* trust band split into Backed by / Partners */
 .lg-groups .lg-tile{opacity:1!important;transform:none!important}@media (max-width:1180px){.lg-sep{display:none}}@media (max-width:760px){.lg-row{display:grid!important;grid-template-columns:1fr 1fr;width:100%}.lg-row .lg-tile{width:auto!important}.lg-group{flex-basis:100%!important}}
+
+/* team grid: 4 desktop, 2 tablet/phone, 1 on very narrow phones */
+.tm-grid{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))}.tm-grid>div{min-width:0}@media (max-width:1024px){.tm-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (max-width:359px){.tm-grid{grid-template-columns:1fr}}
