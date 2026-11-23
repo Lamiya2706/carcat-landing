@@ -195,18 +195,30 @@ export default function App() {
       <section id="partners" aria-label="Backed by and partners" className={v.rv_partners} data-rv="partners" style={{background: "var(--soft)", borderBottom: "1px solid var(--line)"}}>
 <div style={{maxWidth: "1200px", margin: "0 auto", padding: "42px 24px", display: "flex", flexDirection: "column", gap: "24px", alignItems: "center"}}>
 <div className="lg-groups">
-      {TRUST.map((g) => (
-        <div key={g.title} className="lg-group">
-          <span className="lg-label">{t(g.title)}</span>
-          <div className="lg-row">
-            {g.items.map((it) => (
-              <a key={it.name} href={it.url} target="_blank" rel="noopener noreferrer" className={"lg-tile" + (it.tall ? " tall" : "")} aria-label={it.name} title={it.name}>
-                <img loading="lazy" decoding="async" src={it.logo} alt={it.name} style={it.scale ? {transform: `scale(${it.scale})`} : undefined} />
+      <div className="lg-block">
+        <span className="lg-eyebrow">{t("Sponsors")}</span>
+        <h2 className="lg-title">{t("Backed by")} <span className="lg-hl">{t("our sponsors")}</span></h2>
+        <div className="sp-grid">
+          {TRUST[0].items.map((it) => (
+            <a key={it.name} href={it.url} target="_blank" rel="noopener noreferrer" className="sp-tile" aria-label={it.name} title={it.name}>
+              <img loading="lazy" decoding="async" src={it.logo} alt={it.name} />
+            </a>
+          ))}
+        </div>
+      </div>
+      <div className="lg-block">
+        <span className="lg-eyebrow">{t("Partners")}</span>
+        <h2 className="lg-title">{t("Working with")} <span className="lg-hl">{t("our partners")}</span></h2>
+        <div className="pt-marquee">
+          <div className="pt-track">
+            {[...TRUST[1].items, ...TRUST[1].items].map((it, k) => (
+              <a key={it.name + k} href={it.url} target="_blank" rel="noopener noreferrer" className={"lg-tile pt-tile" + (it.tall ? " tall" : "")} aria-label={it.name} title={it.name} aria-hidden={k >= TRUST[1].items.length ? true : undefined} tabIndex={k >= TRUST[1].items.length ? -1 : undefined}>
+                <img loading="lazy" decoding="async" src={it.logo} alt={k >= TRUST[1].items.length ? "" : it.name} />
               </a>
             ))}
           </div>
         </div>
-      ))}
+      </div>
       </div></div>
 </section>
 

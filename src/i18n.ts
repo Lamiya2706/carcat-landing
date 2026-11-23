@@ -74,7 +74,7 @@ export const AZ: Record<string, string> = {
   "A buyer or mechanic scans it and gets this report as a PDF.": "Alıcı və ya usta kodu skan edib bu hesabatı PDF formatında alır.",
   "PDF · 3 pages": "PDF · 3 səhifə",
   "Open PDF": "PDF-i aç",
-  "Backed by": "Dəstəkləyənlər",
+  "Backed by": "Bizi dəstəkləyən",
   "Live in Baku": "Bakıda fəaliyyətdədir",
   "Already on CarCat": "Artıq CarCat-dadır",
   "Tap a partner to see where you can book it across the city.": "Tərəfdaşı seçin və şəhərdə harada xidmətə yazıla biləcəyinizi görün.",
@@ -130,6 +130,9 @@ export const AZ: Record<string, string> = {
   "Privacy Policy": "Məxfilik siyasəti",
   "Terms of Service": "İstifadə şərtləri",
   "© 2026 CARCAT MMC. All rights reserved.": "© 2026 CARCAT MMC. Bütün hüquqlar qorunur.",
+  "our sponsors": "sponsorlarımız",
+  "Working with": "Birlikdə çalışdığımız",
+  "our partners": "tərəfdaşlarımız",
 };
 
 export const translate = (lang: Lang) => (s: string) => (lang === "az" ? AZ[s] ?? s : s);
