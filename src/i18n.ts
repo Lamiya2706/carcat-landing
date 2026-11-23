@@ -131,6 +131,9 @@ export const AZ: Record<string, string> = {
   "Download": "Yüklə",
   "Company": "Şirkət",
   "© 2026 CARCAT MMC. All rights reserved.": "© 2026 CARCAT MMC. Bütün hüquqlar qorunur.",
+  "Get CarCat": "CarCat-ı yüklə",
+  "Scan with your phone camera,": "Telefon kamerası ilə skan edin,",
+  "it opens the right store": "uyğun mağaza açılacaq",
   // dynamic labels
   "Drag to explore": "Sürüşdürərək baxın",
   "Add car": "Avtomobil",

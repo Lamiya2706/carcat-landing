@@ -257,3 +257,10 @@ a{color:#111111}a:hover{color:#444444}
   .ct-card .ct-copy a{flex:1 1 auto;text-align:center}
   .ct-list>div{padding:16px!important}
 }
+
+/* team grid: two cards per row on phones (from design) */
+@media (max-width:760px){.tm-grid{gap:12px!important}.tm-grid > div{flex:1 1 calc(50% - 6px)!important;min-width:0!important;padding:12px!important;gap:10px!important;border-radius:18px!important}.tm-grid > div > div:first-child{height:170px!important;border-radius:14px!important}.tm-grid > div > div:last-child{gap:8px!important}.tm-grid > div > div:last-child > div > span:first-child{font-size:14px!important;line-height:1.25}.tm-grid > div > div:last-child > div > span:last-child{font-size:12px!important;line-height:1.3}.tm-grid .so-btn{width:34px!important;height:34px!important}}
+
+/* Features merged into How it works */
+.ft-merged .ft-a-hist{grid-column:1 / 3;grid-row:1}.ft-merged .ft-a-sima{grid-column:3;grid-row:1}@media (max-width:980px){.ft-merged .ft-a-hist,.ft-merged .ft-a-sima{grid-column:1 / 3;grid-row:auto}}@media (max-width:760px){.ft-merged .ft-a-sima{flex:1 1 100%!important}}@media (max-width:640px){.ft-merged .ft-a-hist,.ft-merged .ft-a-sima{grid-column:1}}
+.ft-merged>article{background:var(--card)!important}.ft-merged .ft-a-hist>div:last-child{background:var(--soft)!important}
