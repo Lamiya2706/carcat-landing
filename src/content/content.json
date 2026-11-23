@@ -1,0 +1,375 @@
+{
+  "news": [
+    {
+      "slug": "carcat-westart-demo-day-first-place",
+      "date": "2026-07-12",
+      "image": "n_westart.webp",
+      "fit": "cover",
+      "alt": "CarCat team at WeStart Demo Day",
+      "published": true,
+      "sort": 0,
+      "en": {
+        "title": "CarCat wins 1st place and 56,000 AZN at WeStart Demo Day",
+        "lead": "The grand finale of the \"WeStart\" Acceleration Program - the highly anticipated Demo Day - has officially concluded, and CarCat has emerged as the absolute champion of the cohort.",
+        "body": [
+          "Following a rigorous and intensive 4-month sprint, 11 of the region's most promising startup teams took the stage to pitch their disruptive innovations. After a highly competitive round of presentations and fierce investment battles, CarCat was officially awarded 1st Place. 🥇",
+          "But this victory is about more than just holding the trophy. CarCat made ecosystem history by setting an unprecedented milestone: 💰 Our team secured a 56,000 AZN pre-seed investment package - making it the LARGEST single investment ever awarded to a single startup in the entire history of the WeStart program."
+        ]
+      },
+      "az": {
+        "title": "CarCat WeStart Demo Day-də 1-ci yeri və 56 000 AZN qazandı",
+        "lead": "\"WeStart\" Akselerasiya Proqramının böyük finalı — çoxdan gözlənilən Demo Day başa çatdı və CarCat bu axının mütləq qalibi oldu.",
+        "body": [
+          "4 ay davam edən gərgin və intensiv proqramdan sonra regionun ən perspektivli 11 startap komandası innovativ ideyalarını səhnədə təqdim etdi. Rəqabətli təqdimatlar və investisiya uğrunda gərgin mübarizədən sonra CarCat rəsmi olaraq 1-ci yerə layiq görüldü. 🥇",
+          "Amma bu qələbə təkcə kubokla bağlı deyil. CarCat ekosistemdə tarixi nailiyyətə imza atdı: 💰 komandamız 56 000 AZN həcmində pre-seed investisiya paketi qazandı — bu, WeStart proqramının bütün tarixində bir startapa verilən ən böyük investisiyadır."
+        ]
+      }
+    },
+    {
+      "slug": "carcat-dovlet-qeydiyyati-2026",
+      "date": "2026-07-31",
+      "image": "n_cert.webp",
+      "fit": "contain",
+      "alt": "State register of personal data systems certificate",
+      "published": true,
+      "sort": 1,
+      "en": {
+        "title": "CarCat officially registered by the state",
+        "lead": "On 31 July 2026, the National Cybersecurity Agency under the Ministry of Digital Development and Transport of the Republic of Azerbaijan registered the \"Electronic Management System for Vehicle Service Operations (CarCat MIS)\" in the state register of personal data information systems under number IS647005001.",
+        "body": [
+          "This registration officially confirms that CarCat processes user data securely, transparently, and in full compliance with the requirements of the law."
+        ]
+      },
+      "az": {
+        "title": "CarCat dövlət qeydiyyatından keçdi",
+        "lead": "31 iyul 2026-cı il tarixində Azərbaycan Respublikası Rəqəmsal İnkişaf və Nəqliyyat Nazirliyi yanında Milli Kibertəhlükəsizlik Agentliyi \"Avtomobil servis əməliyyatlarının elektron idarəetmə sistemi (CarCat MİS)\"-ni IS647005001 nömrəsi ilə fərdi məlumatlar informasiya sistemlərinin dövlət reyestrinə daxil etdi.",
+        "body": [
+          "Bu qeydiyyat CarCat-ın istifadəçi məlumatlarını təhlükəsiz, şəffaf və qanunun tələblərinə tam uyğun şəkildə emal etdiyini rəsmi olaraq təsdiqləyir."
+        ]
+      }
+    },
+    {
+      "slug": "carcat-hyperservis-partnership",
+      "date": "2026-07-02",
+      "image": "n_hyper.webp",
+      "fit": "contain",
+      "alt": "CarCat and HyperServis partnership",
+      "published": true,
+      "sort": 2,
+      "en": {
+        "title": "CarCat and HyperServis begin partnership",
+        "lead": "A landmark day for CarCat - our team has launched its first official partnership with HyperServis.",
+        "body": [
+          "Through this partnership, users can add vehicles serviced at HyperServis directly to the CarCat app. This means a car's complete maintenance history is gathered in one place, with no need for manual data entry.",
+          "Inside the app, users can track their vehicle's current maintenance status, see how long until the next service is due, and get a full picture of the maintenance costs incurred so far.",
+          "This is an important step in CarCat's mission to bring a transparent and effortless car maintenance experience to vehicle owners in Azerbaijan."
+        ]
+      },
+      "az": {
+        "title": "CarCat və HyperServis tərəfdaşlığa başladı",
+        "lead": "CarCat üçün əlamətdar gün — komandamız HyperServis ilə ilk rəsmi tərəfdaşlığa başladı.",
+        "body": [
+          "Bu tərəfdaşlıq sayəsində istifadəçilər HyperServis-də xidmət almış avtomobillərini birbaşa CarCat tətbiqinə əlavə edə bilərlər. Beləliklə, avtomobilin tam baxım tarixçəsi əl ilə məlumat daxil etmədən bir yerdə toplanır.",
+          "Tətbiqdə istifadəçilər avtomobilin cari baxım vəziyyətini izləyə, növbəti servisə nə qədər qaldığını görə və indiyədək çəkilən baxım xərcləri barədə tam təsəvvür əldə edə bilərlər.",
+          "Bu, CarCat-ın Azərbaycandakı avtomobil sahiblərinə şəffaf və rahat baxım təcrübəsi təqdim etmək missiyasında mühüm addımdır."
+        ]
+      }
+    }
+  ],
+  "team": [
+    {
+      "id": "t1",
+      "name": "Nemat Mirzayev",
+      "photo": "nemat.webp",
+      "role": {
+        "en": "Chief Executive Officer",
+        "az": "Baş icraçı direktor"
+      },
+      "linkedin": "https://www.linkedin.com/in/nematmirzayev/",
+      "visible": true,
+      "sort": 0
+    },
+    {
+      "id": "t2",
+      "name": "Rasul Rzayev",
+      "photo": "rasul.webp",
+      "role": {
+        "en": "Chief Technology Officer",
+        "az": "Texniki direktor"
+      },
+      "linkedin": "",
+      "visible": true,
+      "sort": 1
+    },
+    {
+      "id": "t3",
+      "name": "Jeyhun Abdullayev",
+      "photo": "jeyhun.webp",
+      "role": {
+        "en": "Chief Product Officer",
+        "az": "Məhsul direktoru"
+      },
+      "linkedin": "",
+      "visible": true,
+      "sort": 2
+    },
+    {
+      "id": "t4",
+      "name": "Azad İsali",
+      "photo": "azad.webp",
+      "role": {
+        "en": "Chief Sales Officer",
+        "az": "Satış direktoru"
+      },
+      "linkedin": "",
+      "visible": true,
+      "sort": 3
+    }
+  ],
+  "orgs": [
+    {
+      "id": "s1",
+      "kind": "sponsor",
+      "visible": true,
+      "sort": 0,
+      "name": "PASHA Financial Holding",
+      "logo": "pasha-holding.png",
+      "url": "https://pasha-holding.az/"
+    },
+    {
+      "id": "s2",
+      "kind": "sponsor",
+      "visible": true,
+      "sort": 1,
+      "name": "Bir",
+      "logo": "bir.png",
+      "url": "https://bir.az/en"
+    },
+    {
+      "id": "s3",
+      "kind": "sponsor",
+      "visible": true,
+      "sort": 2,
+      "name": "PASHA Bank",
+      "logo": "pasha-bank.png",
+      "url": "https://www.pashabank.az/lang,en/"
+    },
+    {
+      "id": "s4",
+      "kind": "sponsor",
+      "visible": true,
+      "sort": 3,
+      "name": "PASHA Sığorta",
+      "logo": "pasha-sigorta.png",
+      "url": "https://pasha-insurance.az/en"
+    },
+    {
+      "id": "s5",
+      "kind": "sponsor",
+      "visible": true,
+      "sort": 4,
+      "name": "PASHA Həyat",
+      "logo": "pasha-heyat.png",
+      "url": "https://pasha-life.az/en/"
+    },
+    {
+      "id": "p1",
+      "kind": "partner",
+      "visible": true,
+      "sort": 0,
+      "name": "WeStart by PASHA Holding",
+      "logo": "westart.svg",
+      "url": "https://www.westart.az/"
+    },
+    {
+      "id": "p2",
+      "kind": "partner",
+      "visible": true,
+      "sort": 1,
+      "name": "HyperServis",
+      "logo": "hyper.png",
+      "url": "https://www.hyper.az/",
+      "scale": 1.15
+    },
+    {
+      "id": "p3",
+      "kind": "partner",
+      "visible": true,
+      "sort": 2,
+      "name": "KOBİA",
+      "logo": "kobia.png",
+      "url": "https://smb.gov.az/az",
+      "tall": true
+    },
+    {
+      "id": "p4",
+      "kind": "partner",
+      "visible": true,
+      "sort": 3,
+      "name": "SİMA",
+      "logo": "sima.png",
+      "url": "https://sima.az/az"
+    },
+    {
+      "id": "p5",
+      "kind": "partner",
+      "visible": true,
+      "sort": 4,
+      "name": "Milli Kibertəhlükəsizlik Agentliyi",
+      "logo": "cert.webp",
+      "url": "https://cert.az/",
+      "tall": true
+    },
+    {
+      "id": "p6",
+      "kind": "partner",
+      "visible": true,
+      "sort": 5,
+      "name": "İnnovasiya və Rəqəmsal İnkişaf Agentliyi",
+      "logo": "idda.png",
+      "url": "https://idda.az/az",
+      "tall": true
+    }
+  ],
+  "centers": [
+    {
+      "id": "hyper",
+      "name": "HyperServis",
+      "logo": "hyper.png",
+      "category": {
+        "en": "Service centers",
+        "az": "Servis mərkəzləri"
+      },
+      "soon": false,
+      "locations": [
+        {
+          "district": {
+            "en": "Nasimi",
+            "az": "Nəsimi"
+          },
+          "x": 38,
+          "y": 40,
+          "mapsQuery": "HyperServis Nasimi Baku"
+        },
+        {
+          "district": {
+            "en": "Narimanov",
+            "az": "Nərimanov"
+          },
+          "x": 60,
+          "y": 30,
+          "mapsQuery": "HyperServis Narimanov Baku"
+        },
+        {
+          "district": {
+            "en": "Khatai",
+            "az": "Xətai"
+          },
+          "x": 74,
+          "y": 48,
+          "mapsQuery": "HyperServis Khatai Baku"
+        },
+        {
+          "district": {
+            "en": "Yasamal",
+            "az": "Yasamal"
+          },
+          "x": 22,
+          "y": 52,
+          "mapsQuery": "HyperServis Yasamal Baku"
+        }
+      ],
+      "visible": true,
+      "sort": 0
+    },
+    {
+      "id": "continental",
+      "name": "Continental",
+      "logo": "continental.png",
+      "category": {
+        "en": "Tire fitting",
+        "az": "Təkər montajı"
+      },
+      "soon": false,
+      "locations": [
+        {
+          "district": {
+            "en": "Binagadi",
+            "az": "Binəqədi"
+          },
+          "x": 30,
+          "y": 24,
+          "mapsQuery": "Continental Binagadi Baku"
+        },
+        {
+          "district": {
+            "en": "Khatai",
+            "az": "Xətai"
+          },
+          "x": 68,
+          "y": 62,
+          "mapsQuery": "Continental Khatai Baku"
+        }
+      ],
+      "visible": true,
+      "sort": 1
+    },
+    {
+      "id": "castrol",
+      "name": "Castrol",
+      "logo": "castrol.png",
+      "category": {
+        "en": "Oil change",
+        "az": "Yağın dəyişdirilməsi"
+      },
+      "soon": false,
+      "locations": [
+        {
+          "district": {
+            "en": "Sabail",
+            "az": "Səbail"
+          },
+          "x": 48,
+          "y": 52,
+          "mapsQuery": "Castrol Sabail Baku"
+        },
+        {
+          "district": {
+            "en": "Nizami",
+            "az": "Nizami"
+          },
+          "x": 84,
+          "y": 34,
+          "mapsQuery": "Castrol Nizami Baku"
+        }
+      ],
+      "visible": true,
+      "sort": 2
+    },
+    {
+      "id": "kia",
+      "name": "Kia",
+      "logo": "kia.svg",
+      "category": {
+        "en": "Official service",
+        "az": "Rəsmi servis"
+      },
+      "soon": true,
+      "locations": [
+        {
+          "district": {
+            "en": "Bayil",
+            "az": "Bayıl"
+          },
+          "x": 54,
+          "y": 70,
+          "mapsQuery": "Kia Bayil Baku"
+        }
+      ],
+      "visible": true,
+      "sort": 3
+    }
+  ],
+  "texts": {},
+  "hidden": []
+}
