@@ -270,3 +270,4 @@ a{color:#111111}a:hover{color:#444444}
 
 /* team grid: 4 desktop, 2 tablet/phone, 1 on very narrow phones */
 .tm-grid{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))}.tm-grid>div{min-width:0}@media (max-width:1024px){.tm-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (max-width:359px){.tm-grid{grid-template-columns:1fr}}
+.ft-merged .ft-a-hist{grid-column:1 / -1!important}

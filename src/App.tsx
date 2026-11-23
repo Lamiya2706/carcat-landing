@@ -264,11 +264,6 @@ export default function App() {
       <div className="ft-row" style={{display: "flex", justifyContent: "space-between", padding: "10px 4px", fontSize: "14px"}}><div style={{display: "flex", flexDirection: "column"}}><span style={{fontWeight: "600"}}>{t("Air filter")}</span><span style={{fontSize: "12px", color: "var(--muted)"}}>{t("18 Jun 2025 · 101 200 km")}</span></div><span style={{fontWeight: "700"}}>{t("30 ₼")}</span></div>
       </div>
       </article>
-      <article className="ft-a-sima" style={{order: "3", flex: "1 1 280px", minWidth: "0", background: "var(--soft)", borderRadius: "28px", padding: "28px", display: "flex", flexDirection: "column", justifyContent: "center", gap: "10px"}}>
-      <span className="ft-tile ft-t-shield" style={{width: "40px", height: "40px", borderRadius: "12px", background: "var(--t-green)", display: "flex", alignItems: "center", justifyContent: "center"}}><svg width="22" height="22" viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinejoin="round" aria-hidden="true" style={{stroke: "var(--ink)"}}><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"></path><path className="ft-draw" pathLength="1" d="M9 12l2 2 4-4"></path></svg></span>
-      <h3 style={{margin: "0", fontFamily: "Manrope, Inter, sans-serif", fontSize: "18px", fontWeight: "800"}}>{t("Verified with SIMA")}</h3>
-      <p style={{margin: "0", fontSize: "14px", lineHeight: "1.5", color: "var(--ink2)"}}>{t("Sign in with your phone and PIN. Every profile is confirmed through SIMA.")}</p>
-      </article>
       </div>
       </div>
       </section>
