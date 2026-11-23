@@ -135,6 +135,9 @@ export const AZ: Record<string, string> = {
   "Scan with your phone camera,": "Telefon kamerası ilə skan edin,",
   "it opens the right store": "uyğun mağaza açılacaq",
   "Backed by": "Dəstəkləyənlər",
+  "After these 3 steps": "Bu 3 addımdan sonra",
+  "Your full service history, unlocked": "Tam servis tarixçəniz artıq əlçatandır",
+  "Every visit is saved automatically with its date, mileage, cost and work done. Useful for you, and proof of care when you sell.": "Hər ziyarət tarixi, yürüşü, xərci və görülən işlə birgə avtomatik yadda saxlanılır. Sizin üçün faydalı, satanda isə qayğının sübutu.",
   // dynamic labels
   "Drag to explore": "Sürüşdürərək baxın",
   "Add car": "Avtomobil",
