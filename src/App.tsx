@@ -196,7 +196,6 @@ export default function App() {
 <div style={{maxWidth: "1200px", margin: "0 auto", padding: "42px 24px", display: "flex", flexDirection: "column", gap: "24px", alignItems: "center"}}>
 <div className="lg-groups">
       <div className="lg-block">
-        <span className="lg-eyebrow">{t("Sponsors")}</span>
         <h2 className="lg-title">{t("Backed by")} <span className="lg-hl">{t("our sponsors")}</span></h2>
         <div className="sp-grid">
           {TRUST[0].items.map((it) => (
@@ -207,7 +206,6 @@ export default function App() {
         </div>
       </div>
       <div className="lg-block">
-        <span className="lg-eyebrow">{t("Partners")}</span>
         <h2 className="lg-title">{t("Working with")} <span className="lg-hl">{t("our partners")}</span></h2>
         <div className="pt-marquee">
           <div className="pt-track">
