@@ -147,6 +147,8 @@ export const AZ: Record<string, string> = {
   "PDF · 3 pages · sample": "PDF · 3 səhifə · nümunə",
   "All news": "Bütün xəbərlər",
   "More news": "Digər xəbərlər",
+  "Privacy Policy": "Məxfilik siyasəti",
+  "Terms of Service": "İstifadə şərtləri",
   // dynamic labels
   "Drag to explore": "Sürüşdürərək baxın",
   "Add car": "Avtomobil",

@@ -1,10 +1,10 @@
 import { renderToString } from "react-dom/server";
-import App from "./App";
-import NewsPage from "./NewsPage";
+import Router from "./Router";
+import { routeFor } from "./news";
 
-/** Static HTML for a route, used at build time so crawlers and link previews see real content. */
-export function render(slug: string | null) {
-  return renderToString(slug ? <NewsPage slug={slug} /> : <App />);
+/** Static HTML for a path (relative to the site root), used at build time for crawlers and link previews. */
+export function render(path: string) {
+  return renderToString(<Router route={routeFor(path)} />);
 }
 export { NEWS } from "./news";
 export { SITE } from "./seo";

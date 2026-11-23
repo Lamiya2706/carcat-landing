@@ -60,7 +60,7 @@ const write = (route, html) => {
 // Home
 write("", page({
   route: "", title: S.title, description: S.description, image: abs("og/home.jpg"), type: "website",
-  html: render(null),
+  html: render("/"),
   jsonld: [
     org,
     { "@type": "WebSite", "@id": abs("#website"), url: abs(""), name: S.name, publisher: { "@id": abs("#org") }, inLanguage: ["en", "az"] },
@@ -75,16 +75,29 @@ for (const n of NEWS) {
   const route = `news/${n.slug}/`;
   write(route, page({
     route, title: `${n.en.title} — CarCat`, description: n.en.lead, image: abs(`og/${n.slug}.jpg`), type: "article",
-    html: render(n.slug),
+    html: render("/" + route),
     jsonld: [org, { "@type": "NewsArticle", headline: n.en.title, description: n.en.lead, image: [abs(`og/${n.slug}.jpg`)],
       datePublished: toIso(n.en.date), dateModified: toIso(n.en.date), inLanguage: "en",
       mainEntityOfPage: abs(route), author: { "@id": abs("#org") }, publisher: { "@id": abs("#org") } }],
   }));
 }
 
+// News index + legal pages (legal URLs match the previous carcat.app site, so app-store links keep working)
+write("news/", page({
+  route: "news/", title: "News — CarCat", description: "Latest news from CarCat: awards, partnerships and product updates.",
+  image: abs("og/home.jpg"), type: "website", html: render("/news/"),
+  jsonld: [org, { "@type": "CollectionPage", name: "CarCat news", url: abs("news/") }],
+}));
+for (const [route, title, description] of [
+  ["privacy-policy/", "Privacy Policy — CarCat", "How CarCat collects, uses, stores and protects your personal and vehicle information."],
+  ["terms-of-service/", "Terms and Conditions — CarCat", "The terms that govern your use of the CarCat app and related services."],
+]) {
+  write(route, page({ route, title, description, image: abs("og/home.jpg"), type: "website", html: render("/" + route), jsonld: [org] }));
+}
+
 // sitemap + robots
 const today = new Date().toISOString().slice(0, 10);
-const urls = [{ loc: abs(""), lastmod: today, pri: "1.0" }, ...NEWS.map((n) => ({ loc: abs(`news/${n.slug}/`), lastmod: toIso(n.en.date), pri: "0.7" }))];
+const urls = [{ loc: abs(""), lastmod: today, pri: "1.0" }, { loc: abs("news/"), lastmod: today, pri: "0.6" }, { loc: abs("privacy-policy/"), lastmod: "2025-12-25", pri: "0.3" }, { loc: abs("terms-of-service/"), lastmod: "2025-12-25", pri: "0.3" }, ...NEWS.map((n) => ({ loc: abs(`news/${n.slug}/`), lastmod: toIso(n.en.date), pri: "0.7" }))];
 fs.writeFileSync(path.join(dist, "sitemap.xml"),
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
   urls.map((u) => `  <url><loc>${u.loc}</loc><lastmod>${u.lastmod}</lastmod><priority>${u.pri}</priority></url>`).join("\n") + `\n</urlset>\n`);
