@@ -375,3 +375,9 @@ a.mp-tag:hover{border-color:#C6F24E!important}
 .cc-root.dark .ft-preview{background:#ececE7!important;border-color:transparent!important}
 .cc-root.dark .hw-c{border-color:#C6F24E!important}
 .cc-root.dark .sp-tile img,.cc-root.dark .pt-tile img,.cc-root.dark .lg-tile img{mix-blend-mode:multiply}
+.cc-root.dark .nw-img{background:#ececE7!important;border-color:transparent!important}
+.cc-root.dark .nw-img img{mix-blend-mode:multiply;filter:none!important}
+.cc-root.dark .nd-hero.contain,.cc-root.dark .nd-card-img.contain{background:#ececE7;border-color:transparent}
+.cc-root.dark .nd-hero.contain img,.cc-root.dark .nd-card-img.contain img{mix-blend-mode:multiply}
+.cc-root.dark .mp-card img{mix-blend-mode:multiply}
+.cc-root.dark .mp-card span:has(> img){background:#ececE7!important;border-color:transparent!important}
