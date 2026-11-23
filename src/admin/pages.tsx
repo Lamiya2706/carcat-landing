@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { mediaUrl, sb, slugify } from "./supabase";
-import { Bilingual, Btn, Drawer, Field, ImagePick, PageHead, Reorder, Text, Toggle, toast, useTable, type Row } from "./ui";
+import { markDeleted, Bilingual, Btn, Drawer, Field, ImagePick, PageHead, Reorder, Text, Toggle, toast, useTable, type Row } from "./ui";
 import TEXT_KEYS from "./text-keys.json";
 
 const fmtDate = (iso: string) => new Date(iso + "T00:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
@@ -372,6 +372,7 @@ export function TextsPage() {
       if (!over[k.key]) return;
       const { error } = await sb.from("texts").delete().eq("key", k.key);
       if (error) return toast(error.message, "err");
+      await markDeleted();
       setOver(({ [k.key]: _, ...rest }) => rest);
       return toast("Back to the original text");
     }

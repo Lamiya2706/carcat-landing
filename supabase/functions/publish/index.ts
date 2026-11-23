@@ -41,7 +41,7 @@ Deno.serve(async (req) => {
   const counts = await Promise.all(
     ["news", "team", "orgs", "centers", "texts"].map((t) => db.from(t).select("*", { count: "exact", head: true }).gt("updated_at", since)),
   );
-  const { data: hid } = await db.from("settings").select("updated_at").eq("key", "hidden").gt("updated_at", since);
+  const { data: hid } = await db.from("settings").select("updated_at").in("key", ["hidden", "last_delete"]).gt("updated_at", since);
   const pending = counts.reduce((n, c) => n + (c.count ?? 0), 0) + (hid?.length ?? 0);
   const r = await gh(`/actions/workflows/${WORKFLOW}/runs?per_page=1`);
   const run = r.ok ? (await r.json()).workflow_runs?.[0] : undefined;
