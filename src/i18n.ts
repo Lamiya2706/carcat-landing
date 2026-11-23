@@ -142,4 +142,4 @@ const OVR = CONTENT.texts;
 
 /** Admin overrides win, then the built-in Azerbaijani copy, then the English source string. */
 export const translate = (lang: Lang) => (s: string) =>
-  lang === "az" ? OVR[s]?.az || AZ[s] || OVR[s]?.en || s : OVR[s]?.en || s;
+  lang === "az" ? OVR[s]?.az || (s in AZ ? AZ[s] : OVR[s]?.en || s) : OVR[s]?.en || s;

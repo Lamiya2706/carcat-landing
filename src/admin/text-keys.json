@@ -67,12 +67,12 @@
  {
   "key": "Always ready",
   "section": "Hero",
-  "az": "Həmişə"
+  "az": "Həmişə yola"
  },
  {
   "key": "to",
   "section": "Hero",
-  "az": "yola"
+  "az": ""
  },
  {
   "key": "drive.",
@@ -232,7 +232,7 @@
  {
   "key": "Three steps to a car that's always ready.",
   "section": "How it works",
-  "az": "Həmişə yola hazır avtomobil üçün üç addım."
+  "az": "Həmişə yola hazır olmaq üçün üç addım."
  },
  {
   "key": "JTNB11HK503214521",
