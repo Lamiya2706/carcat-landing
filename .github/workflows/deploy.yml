@@ -34,6 +34,8 @@ jobs:
             echo "BASE_PATH=/carcat-landing/" >> "$GITHUB_ENV"
             echo "SITE_URL=https://lamiya2706.github.io/carcat-landing" >> "$GITHUB_ENV"
           fi
+      - name: Pull latest content from Supabase
+        run: node scripts/fetch-content.mjs
       - run: npm run build
       - name: Add CNAME for custom domain
         if: ${{ vars.CUSTOM_DOMAIN != '' }}

@@ -1,0 +1,592 @@
+[
+ {
+  "key": "How it works",
+  "section": "Header & menu",
+  "az": "Necə işləyir"
+ },
+ {
+  "key": "For service centers",
+  "section": "Header & menu",
+  "az": "Servis mərkəzləri üçün"
+ },
+ {
+  "key": "News",
+  "section": "Header & menu",
+  "az": "Xəbərlər"
+ },
+ {
+  "key": "Team",
+  "section": "Header & menu",
+  "az": "Komanda"
+ },
+ {
+  "key": "Partners",
+  "section": "Header & menu",
+  "az": "Tərəfdaşlar"
+ },
+ {
+  "key": "Partners map",
+  "section": "Header & menu",
+  "az": "Tərəfdaş xəritəsi"
+ },
+ {
+  "key": "Oil change",
+  "section": "Hero",
+  "az": "Yağın dəyişdirilməsi"
+ },
+ {
+  "key": "Tire service",
+  "section": "Hero",
+  "az": "Təkər xidməti"
+ },
+ {
+  "key": "Brake service",
+  "section": "Hero",
+  "az": "Əyləc sisteminə baxış"
+ },
+ {
+  "key": "Inspection & repair",
+  "section": "Hero",
+  "az": "Diaqnostika və təmir"
+ },
+ {
+  "key": "Air filter",
+  "section": "Hero",
+  "az": "Hava filtri"
+ },
+ {
+  "key": "Routine care",
+  "section": "Hero",
+  "az": "Dövri baxım"
+ },
+ {
+  "key": "Individual services",
+  "section": "Hero",
+  "az": "Fərdi xidmətlər"
+ },
+ {
+  "key": "Always ready",
+  "section": "Hero",
+  "az": "Həmişə"
+ },
+ {
+  "key": "to",
+  "section": "Hero",
+  "az": "yola"
+ },
+ {
+  "key": "drive.",
+  "section": "Hero",
+  "az": "hazır."
+ },
+ {
+  "key": "Your car's maintenance plan, service bookings and full history, in one simple app.",
+  "section": "Hero",
+  "az": "Avtomobilinizin texniki baxım planı, servis rezervləri və bütün tarixçəsi — hamısı bir sadə tətbiqdə."
+ },
+ {
+  "key": "Get CarCat",
+  "section": "Hero",
+  "az": "CarCat-ı yükləyin"
+ },
+ {
+  "key": "App Store",
+  "section": "Hero",
+  "az": ""
+ },
+ {
+  "key": "·",
+  "section": "Hero",
+  "az": ""
+ },
+ {
+  "key": "Google Play",
+  "section": "Hero",
+  "az": ""
+ },
+ {
+  "key": "Scan with your phone camera,",
+  "section": "Hero",
+  "az": "Telefonunuzun kamerası ilə skan edin —"
+ },
+ {
+  "key": "it opens the right store",
+  "section": "Hero",
+  "az": "uyğun mağaza avtomatik açılacaq"
+ },
+ {
+  "key": "Download on the",
+  "section": "Hero",
+  "az": "Yükləyin:"
+ },
+ {
+  "key": "GET IT ON",
+  "section": "Hero",
+  "az": "YÜKLƏYİN:"
+ },
+ {
+  "key": "Mileage",
+  "section": "Hero",
+  "az": "Yürüş"
+ },
+ {
+  "key": "125 600 km",
+  "section": "Hero",
+  "az": ""
+ },
+ {
+  "key": "Your car",
+  "section": "Hero",
+  "az": "Avtomobiliniz"
+ },
+ {
+  "key": "Toyota Camry",
+  "section": "Hero",
+  "az": ""
+ },
+ {
+  "key": "99-ES-002 · 2020",
+  "section": "Hero",
+  "az": ""
+ },
+ {
+  "key": "Last service date",
+  "section": "Hero",
+  "az": "Son servis tarixi"
+ },
+ {
+  "key": "7 April 2026",
+  "section": "Hero",
+  "az": "7 aprel 2026"
+ },
+ {
+  "key": "Engine oil & filter",
+  "section": "Hero",
+  "az": "Mühərrik yağı və filtri"
+ },
+ {
+  "key": "Last service mileage",
+  "section": "Hero",
+  "az": "Son servisdəki yürüş"
+ },
+ {
+  "key": "118 400 km",
+  "section": "Hero",
+  "az": ""
+ },
+ {
+  "key": "Recently booked",
+  "section": "Hero",
+  "az": "Son rezerv"
+ },
+ {
+  "key": "HyperServis",
+  "section": "Hero",
+  "az": ""
+ },
+ {
+  "key": "28 May St, Baku · 1.2 km",
+  "section": "Hero",
+  "az": "28 May küç., Bakı · 1.2 km"
+ },
+ {
+  "key": "Across Baku",
+  "section": "Hero",
+  "az": "Bakı üzrə"
+ },
+ {
+  "key": "8 partner locations",
+  "section": "Hero",
+  "az": "8 tərəfdaş ünvanı"
+ },
+ {
+  "key": "Selected",
+  "section": "Hero",
+  "az": "Seçildi"
+ },
+ {
+  "key": "Regular maintenance",
+  "section": "Hero",
+  "az": "Planlı texniki baxım"
+ },
+ {
+  "key": "Your service center",
+  "section": "Hero",
+  "az": "Servis mərkəziniz"
+ },
+ {
+  "key": "1.2 km away",
+  "section": "Hero",
+  "az": "1.2 km məsafədə"
+ },
+ {
+  "key": "Backed by",
+  "section": "Sponsors",
+  "az": "Bizi dəstəkləyən"
+ },
+ {
+  "key": "our sponsors",
+  "section": "Sponsors",
+  "az": "sponsorlarımız"
+ },
+ {
+  "key": "Three steps to a car that's always ready.",
+  "section": "How it works",
+  "az": "Həmişə yola hazır avtomobil üçün üç addım."
+ },
+ {
+  "key": "JTNB11HK503214521",
+  "section": "How it works",
+  "az": ""
+ },
+ {
+  "key": "AZ",
+  "section": "How it works",
+  "az": ""
+ },
+ {
+  "key": "99-ES-002",
+  "section": "How it works",
+  "az": ""
+ },
+ {
+  "key": "VIN",
+  "section": "How it works",
+  "az": ""
+ },
+ {
+  "key": "Plate",
+  "section": "How it works",
+  "az": "Nömrə"
+ },
+ {
+  "key": "Toyota Camry 2020 found",
+  "section": "How it works",
+  "az": "Toyota Camry 2020 tapıldı"
+ },
+ {
+  "key": "Add your car",
+  "section": "How it works",
+  "az": "Avtomobilinizi əlavə edin"
+ },
+ {
+  "key": "Scan your VIN or enter your plate. CarCat recognizes the model and builds a maintenance plan for your exact car.",
+  "section": "How it works",
+  "az": "VIN kodu skan edin və ya dövlət nömrəsini daxil edin. CarCat modeli tanıyır və məhz sizin avtomobiliniz üçün baxım planı hazırlayır."
+ },
+ {
+  "key": "126 800 km",
+  "section": "How it works",
+  "az": ""
+ },
+ {
+  "key": "Due in 1 200 km",
+  "section": "How it works",
+  "az": "1 200 km sonra"
+ },
+ {
+  "key": "Get your schedule",
+  "section": "How it works",
+  "az": "Baxım cədvəlinizi alın"
+ },
+ {
+  "key": "Log your last service and mileage. CarCat tells you what's due next, and reminds you before it's late.",
+  "section": "How it works",
+  "az": "Son servisi və cari yürüşü qeyd edin. CarCat növbəti baxımın vaxtını göstərir və gecikməmiş xatırladır."
+ },
+ {
+  "key": "Saturday, 22 November",
+  "section": "How it works",
+  "az": "Şənbə, 22 noyabr"
+ },
+ {
+  "key": "09:00",
+  "section": "How it works",
+  "az": ""
+ },
+ {
+  "key": "10:00",
+  "section": "How it works",
+  "az": ""
+ },
+ {
+  "key": "11:30",
+  "section": "How it works",
+  "az": ""
+ },
+ {
+  "key": "13:00",
+  "section": "How it works",
+  "az": ""
+ },
+ {
+  "key": "15:00",
+  "section": "How it works",
+  "az": ""
+ },
+ {
+  "key": "16:30",
+  "section": "How it works",
+  "az": ""
+ },
+ {
+  "key": "Confirm 10:00",
+  "section": "How it works",
+  "az": "10:00-ı təsdiqlə"
+ },
+ {
+  "key": "Booked ✓",
+  "section": "How it works",
+  "az": "Rezerv edildi ✓"
+ },
+ {
+  "key": "Book a service",
+  "section": "How it works",
+  "az": "Servisə yazılın"
+ },
+ {
+  "key": "Pick a service center, choose a free time slot and book in seconds. The visit is saved to your car's history.",
+  "section": "How it works",
+  "az": "Servis mərkəzini və boş vaxtı seçin, bir neçə saniyəyə yazılın. Ziyarət avtomatik olaraq avtomobilin tarixçəsinə düşür."
+ },
+ {
+  "key": "After these 3 steps",
+  "section": "How it works",
+  "az": "Bu 3 addımdan sonra"
+ },
+ {
+  "key": "Your full service history, unlocked",
+  "section": "How it works",
+  "az": "Bütün servis tarixçəniz bir yerdə"
+ },
+ {
+  "key": "Every visit is saved automatically with its date, mileage, cost and work done. Selling the car? Share the whole history with a QR code.",
+  "section": "How it works",
+  "az": "Hər ziyarət tarixi, yürüşü, xərci və görülən işlərlə birlikdə avtomatik saxlanılır. Avtomobili satırsınız? Bütün tarixçəni QR kodla paylaşın."
+ },
+ {
+  "key": "PDF · 3 pages",
+  "section": "How it works",
+  "az": "PDF · 3 səhifə"
+ },
+ {
+  "key": "Share history by QR",
+  "section": "How it works",
+  "az": "Tarixçəni QR kodla paylaşın"
+ },
+ {
+  "key": "A buyer or mechanic scans it and gets this report as a PDF.",
+  "section": "How it works",
+  "az": "Alıcı və ya usta kodu skan edib bu hesabatı PDF formatında alır."
+ },
+ {
+  "key": "Open PDF",
+  "section": "How it works",
+  "az": "PDF-i aç"
+ },
+ {
+  "key": "Live in Baku",
+  "section": "Partners map",
+  "az": "Bakıda fəaliyyətdədir"
+ },
+ {
+  "key": "Already on CarCat",
+  "section": "Partners map",
+  "az": "Artıq CarCat-dadır"
+ },
+ {
+  "key": "Tap a partner to see where you can book it across the city.",
+  "section": "Partners map",
+  "az": "Tərəfdaşı seçin və şəhərdə harada xidmətə yazıla biləcəyinizi görün."
+ },
+ {
+  "key": "Open in Google Maps",
+  "section": "Partners map",
+  "az": "Google Maps-də aç"
+ },
+ {
+  "key": "soon",
+  "section": "Partners map",
+  "az": "tezliklə"
+ },
+ {
+  "key": "Drag to explore",
+  "section": "Partners map",
+  "az": "Xəritəni sürüşdürün"
+ },
+ {
+  "key": "Baku · partner locations",
+  "section": "Partners map",
+  "az": "Bakı · tərəfdaş ünvanları"
+ },
+ {
+  "key": "Soon",
+  "section": "Partners map",
+  "az": "Tezliklə"
+ },
+ {
+  "key": "Coming soon",
+  "section": "Partners map",
+  "az": "Tezliklə"
+ },
+ {
+  "key": "Get bookings from drivers who already need you.",
+  "section": "For service centers",
+  "az": "Sizə artıq ehtiyacı olan sürücülərdən rezervlər qəbul edin."
+ },
+ {
+  "key": "CarCat drivers see when their car is due and book a free slot at your center. You get organized appointments and a digital record of every job.",
+  "section": "For service centers",
+  "az": "CarCat istifadəçiləri baxım vaxtının çatdığını görür və mərkəzinizdə boş vaxta yazılır. Siz nizamlı qəbul cədvəli və görülən hər işin rəqəmsal qeydini əldə edirsiniz."
+ },
+ {
+  "key": "Become a partner",
+  "section": "For service centers",
+  "az": "Tərəfdaş olun"
+ },
+ {
+  "key": "+994 70 575 75 70",
+  "section": "For service centers",
+  "az": ""
+ },
+ {
+  "key": "New customers",
+  "section": "For service centers",
+  "az": "Yeni müştərilər"
+ },
+ {
+  "key": "Drivers find you when a service is due.",
+  "section": "For service centers",
+  "az": "Servis vaxtı çatan sürücülər sizi tapır."
+ },
+ {
+  "key": "A clear schedule",
+  "section": "For service centers",
+  "az": "Aydın iş qrafiki"
+ },
+ {
+  "key": "Bookings arrive with the car, service and time slot.",
+  "section": "For service centers",
+  "az": "Hər rezerv avtomobil, xidmət və vaxt məlumatı ilə gəlir."
+ },
+ {
+  "key": "Digital service records",
+  "section": "For service centers",
+  "az": "Rəqəmsal servis qeydləri"
+ },
+ {
+  "key": "Completed work goes straight into the driver's history.",
+  "section": "For service centers",
+  "az": "Görülən iş birbaşa sürücünün tarixçəsinə yazılır."
+ },
+ {
+  "key": "Newsroom",
+  "section": "News",
+  "az": "Xəbərlər"
+ },
+ {
+  "key": "Latest from CarCat",
+  "section": "News",
+  "az": "CarCat-dan son xəbərlər"
+ },
+ {
+  "key": "Founding team",
+  "section": "Team",
+  "az": "Təsisçilər"
+ },
+ {
+  "key": "The people behind CarCat",
+  "section": "Team",
+  "az": "CarCat-ı yaradan komanda"
+ },
+ {
+  "key": "Working with",
+  "section": "Team",
+  "az": "Birlikdə çalışdığımız"
+ },
+ {
+  "key": "our partners",
+  "section": "Team",
+  "az": "tərəfdaşlarımız"
+ },
+ {
+  "key": "Stay in the loop",
+  "section": "Follow strip",
+  "az": "Yeniliklərdən xəbərdar olun"
+ },
+ {
+  "key": "Follow CarCat",
+  "section": "Follow strip",
+  "az": "CarCat-ı izləyin"
+ },
+ {
+  "key": "@carcat.app",
+  "section": "Follow strip",
+  "az": ""
+ },
+ {
+  "key": "Car care tips, new partners and app updates, every week.",
+  "section": "Follow strip",
+  "az": "Hər həftə avtomobil qulluğu üzrə tövsiyələr, yeni tərəfdaşlar və tətbiq yenilikləri."
+ },
+ {
+  "key": "Instagram",
+  "section": "Follow strip",
+  "az": ""
+ },
+ {
+  "key": "Facebook",
+  "section": "Follow strip",
+  "az": ""
+ },
+ {
+  "key": "TikTok",
+  "section": "Follow strip",
+  "az": ""
+ },
+ {
+  "key": "Your all-in-one car maintenance companion.",
+  "section": "Footer",
+  "az": "Avtomobilinizə qulluq üçün hər şey bir tətbiqdə."
+ },
+ {
+  "key": "Product",
+  "section": "Footer",
+  "az": "Məhsul"
+ },
+ {
+  "key": "Download",
+  "section": "Footer",
+  "az": "Yüklə"
+ },
+ {
+  "key": "Company",
+  "section": "Footer",
+  "az": "Şirkət"
+ },
+ {
+  "key": "Privacy Policy",
+  "section": "Footer",
+  "az": "Məxfilik siyasəti"
+ },
+ {
+  "key": "Terms of Service",
+  "section": "Footer",
+  "az": "İstifadə şərtləri"
+ },
+ {
+  "key": "© 2026 CARCAT MMC. All rights reserved.",
+  "section": "Footer",
+  "az": "© 2026 CARCAT MMC. Bütün hüquqlar qorunur."
+ },
+ {
+  "key": "Back",
+  "section": "Other pages",
+  "az": "Geri"
+ },
+ {
+  "key": "More news",
+  "section": "Other pages",
+  "az": "Digər xəbərlər"
+ }
+]
