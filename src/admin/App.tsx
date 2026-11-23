@@ -159,7 +159,7 @@ function Publish() {
     const { data, error } = await sb.functions.invoke("publish", { body: { action: "publish" } });
     setBusy(false);
     if (error || data?.error) return toast("Publish failed: " + (data?.error ?? error?.message), "err");
-    toast("Publishing… the site updates in about a minute");
+    toast("Published — visitors see it now");
     setSt((s) => ({ ...s, status: "queued", pending: 0 }));
     setTimeout(refresh, 4000);
   };
@@ -167,9 +167,9 @@ function Publish() {
     <div className="ad-publish">
       <span className={"ad-dot " + (running ? "run" : failed ? "err" : st.pending ? "warn" : "ok")} />
       <span className="ad-publish-txt">
-        {running ? "Publishing…" : failed ? <a href={st.url} target="_blank" rel="noreferrer">Last publish failed</a> : st.pending ? `${st.pending} unpublished change${st.pending === 1 ? "" : "s"}` : "Site is up to date"}
+        {running ? "Live · updating search version…" : failed ? <a href={st.url} target="_blank" rel="noreferrer">Last publish failed</a> : st.pending ? `${st.pending} unpublished change${st.pending === 1 ? "" : "s"}` : "Site is up to date"}
       </span>
-      <Btn kind="dark" disabled={busy || running} onClick={go}>{running ? "Publishing…" : "Publish"}</Btn>
+      <Btn kind="dark" disabled={busy} onClick={go}>{busy ? "Publishing…" : "Publish"}</Btn>
     </div>
   );
 }
