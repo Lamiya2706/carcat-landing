@@ -103,7 +103,7 @@ const urls = [{ loc: abs(""), lastmod: today, pri: "1.0" }, { loc: abs("news/"),
 fs.writeFileSync(path.join(dist, "sitemap.xml"),
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
   urls.map((u) => `  <url><loc>${u.loc}</loc><lastmod>${u.lastmod}</lastmod><priority>${u.pri}</priority></url>`).join("\n") + `\n</urlset>\n`);
-fs.writeFileSync(path.join(dist, "robots.txt"), `User-agent: *\nAllow: /\nDisallow: ${base}get/\n\nSitemap: ${abs("sitemap.xml")}\n`);
+fs.writeFileSync(path.join(dist, "robots.txt"), `User-agent: *\nAllow: /\nDisallow: ${base}get/\nDisallow: ${base}admin/\n\nSitemap: ${abs("sitemap.xml")}\n`);
 
 // 404: send visitors to the homepage
 fs.writeFileSync(path.join(dist, "404.html"),
