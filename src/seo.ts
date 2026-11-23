@@ -4,7 +4,7 @@ export const SITE = {
   legalName: "CARCAT MMC",
   title: "CarCat — car maintenance, service booking and full service history",
   description:
-    "Your car's maintenance plan, service bookings and full service history in one simple app. Book partner service centers in Baku. Built for drivers in Azerbaijan.",
+    "Your car's maintenance plan, service bookings and full service history in one simple app. Book partner service centers in Baku.",
   phone: "+994705757570",
   email: "nemat.mirzayev@carcat.app",
   appStore: "https://apps.apple.com/gb/app/carcat-auto-services/id6756967222",

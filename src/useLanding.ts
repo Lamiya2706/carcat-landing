@@ -41,23 +41,28 @@ export function useLanding() {
     const el = mapRef.current;
     if (el) el.style.transform = `translate3d(${pan.current.x}px, ${pan.current.y}px, 0)`;
   };
+  const moved = useRef(false);
   const mapDrag = {
     onPointerDown: (e: React.PointerEvent<HTMLDivElement>) => {
       if (e.pointerType === "mouse" && e.button !== 0) return;
-      e.currentTarget.setPointerCapture(e.pointerId);
-      e.currentTarget.classList.add("dragging");
+      moved.current = false;
       drag.current = { id: e.pointerId, sx: e.clientX, sy: e.clientY, ox: pan.current.x, oy: pan.current.y };
     },
     onPointerMove: (e: React.PointerEvent<HTMLDivElement>) => {
       const d = drag.current;
       if (!d || d.id !== e.pointerId) return;
+      const dx = e.clientX - d.sx, dy = e.clientY - d.sy;
+      // only start dragging after a small move, so taps on a pin still open Google Maps
+      if (!moved.current) {
+        if (Math.hypot(dx, dy) < 6) return;
+        moved.current = true;
+        e.currentTarget.setPointerCapture(e.pointerId);
+        e.currentTarget.classList.add("dragging");
+      }
       const el = e.currentTarget;
-      const mx = el.offsetWidth / 7; // 20% of the frame = 1/7 of a 140% layer
+      const mx = el.offsetWidth / 7;
       const my = el.offsetHeight / 7;
-      pan.current = {
-        x: Math.max(-mx, Math.min(mx, d.ox + e.clientX - d.sx)),
-        y: Math.max(-my, Math.min(my, d.oy + e.clientY - d.sy)),
-      };
+      pan.current = { x: Math.max(-mx, Math.min(mx, d.ox + dx)), y: Math.max(-my, Math.min(my, d.oy + dy)) };
       applyPan();
     },
     onPointerUp: (e: React.PointerEvent<HTMLDivElement>) => {
@@ -67,6 +72,13 @@ export function useLanding() {
     onPointerCancel: (e: React.PointerEvent<HTMLDivElement>) => {
       drag.current = null;
       e.currentTarget.classList.remove("dragging");
+    },
+    onClickCapture: (e: React.MouseEvent) => {
+      if (moved.current) {
+        e.preventDefault();
+        e.stopPropagation();
+        moved.current = false;
+      }
     },
     onDoubleClick: () => {
       pan.current = { x: 0, y: 0 };

@@ -48,7 +48,7 @@ export default function NewsPage({ slug }: { slug: string }) {
               <div className="nd-cta">
                 <div>
                   <strong>{t("Get CarCat")}</strong>
-                  <span>{t("Your car's maintenance plan, service bookings and full history, in one simple app. Built for drivers in Azerbaijan.")}</span>
+                  <span>{t("Your car's maintenance plan, service bookings and full history, in one simple app.")}</span>
                 </div>
                 <a href={home + "get/"} className="nd-cta-btn">{t("Download")}</a>
               </div>
