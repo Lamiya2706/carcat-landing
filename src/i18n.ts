@@ -138,6 +138,10 @@ export const AZ: Record<string, string> = {
   "After these 3 steps": "Bu 3 addımdan sonra",
   "Your full service history, unlocked": "Tam servis tarixçəniz artıq əlçatandır",
   "Every visit is saved automatically with its date, mileage, cost and work done. Useful for you, and proof of care when you sell.": "Hər ziyarət tarixi, yürüşü, xərci və görülən işlə birgə avtomatik yadda saxlanılır. Sizin üçün faydalı, satanda isə qayğının sübutu.",
+  "Every visit is saved automatically with its date, mileage, cost and work done. Selling the car? Share the whole history with a QR code.": "Hər ziyarət tarixi, yürüşü, xərci və görülən işlə birgə avtomatik yadda saxlanılır. Avtomobili satırsınız? Bütün tarixçəni QR kodla paylaşın.",
+  "Share history by QR": "Tarixçəni QR ilə paylaş",
+  "A buyer or mechanic scans it and gets the full history file.": "Alıcı və ya usta skan edib tam tarixçə faylını alır.",
+  "Share": "Paylaş",
   // dynamic labels
   "Drag to explore": "Sürüşdürərək baxın",
   "Add car": "Avtomobil",
