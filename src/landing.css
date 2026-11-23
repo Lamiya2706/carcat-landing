@@ -271,3 +271,46 @@ a{color:#111111}a:hover{color:#444444}
 /* team grid: 4 desktop, 2 tablet/phone, 1 on very narrow phones */
 .tm-grid{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))}.tm-grid>div{min-width:0}@media (max-width:1024px){.tm-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (max-width:359px){.tm-grid{grid-template-columns:1fr}}
 .ft-merged .ft-a-hist{grid-column:1 / -1!important}
+
+/* ---------- news article pages ---------- */
+.nd-root{min-height:100vh;display:flex;flex-direction:column;background:var(--page);color:var(--ink);font-family:Inter,system-ui,sans-serif;transition:background .4s,color .4s}
+.nd-wrap{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box;width:100%}
+.nd-hdr{position:sticky;top:0;z-index:10;background:var(--hdr);border-bottom:1px solid var(--line)}
+.nd-hdr-in{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:16px;padding-bottom:16px}
+.nd-logo img{height:40px;width:auto;display:block}
+.nd-nav{display:flex;gap:28px;font-size:15px;font-weight:500}
+.nd-nav a{text-decoration:none;color:var(--ink2)}
+.nd-tools{display:flex;align-items:center;gap:12px}
+.nd-lang{display:flex;border:1px solid var(--line);border-radius:999px;padding:3px;font-size:13px;font-weight:600}
+.nd-lang button{border:0;background:transparent;color:var(--ink2);border-radius:999px;padding:6px 12px;font:inherit;cursor:pointer}
+.nd-lang button.on{background:var(--band);color:#fff}
+.nd-theme{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer}
+.nd-article{max-width:800px;padding-top:42px;padding-bottom:42px;display:flex;flex-direction:column;gap:20px}
+.nd-back{display:inline-flex;align-items:center;gap:6px;align-self:flex-start;text-decoration:none;color:var(--ink2);font-size:14px;font-weight:600}
+.nd-kicker{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.nd-article h1{margin:0;font-family:Manrope,Inter,sans-serif;font-size:44px;font-weight:800;letter-spacing:-.03em;line-height:1.1}
+.nd-lead{margin:0;font-size:20px;line-height:1.55;color:var(--ink2)}
+.nd-hero{border-radius:28px;overflow:hidden;border:1px solid var(--line);background:var(--soft2);aspect-ratio:16/9}
+.nd-hero img{width:100%;height:100%;object-fit:cover;display:block}
+.nd-hero.contain{background:#fff}.nd-hero.contain img{object-fit:contain;padding:40px;box-sizing:border-box}
+.nd-body{display:flex;flex-direction:column;gap:16px}
+.nd-body p{margin:0;font-size:17px;line-height:1.7;color:var(--ink)}
+.nd-cta{margin-top:12px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;background:var(--band);color:#fff;border-radius:24px;padding:24px 28px}
+.nd-cta div{display:flex;flex-direction:column;gap:6px;max-width:480px}
+.nd-cta strong{font-family:Manrope,Inter,sans-serif;font-size:20px}
+.nd-cta span{font-size:14px;line-height:1.5;color:#c4c4c4}
+.nd-cta-btn{background:#C6F24E;color:#111;text-decoration:none;padding:12px 22px;border-radius:999px;font-weight:700}
+.nd-more{padding-top:42px;padding-bottom:42px;border-top:1px solid var(--line)}
+.nd-more h2{margin:0 0 24px;font-family:Manrope,Inter,sans-serif;font-size:28px;font-weight:800;letter-spacing:-.02em}
+.nd-more-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.nd-card{display:flex;flex-direction:column;gap:12px;text-decoration:none;color:var(--ink)}
+.nd-card-img{height:200px;border-radius:24px;overflow:hidden;border:1px solid var(--line);background:var(--soft2)}
+.nd-card-img img{width:100%;height:100%;object-fit:cover;display:block}
+.nd-card-img.contain{background:#fff}.nd-card-img.contain img{object-fit:contain;padding:28px;box-sizing:border-box}
+.nd-card span{font-size:13px;color:var(--muted)}
+.nd-card h3{margin:0;font-family:Manrope,Inter,sans-serif;font-size:20px;font-weight:800;line-height:1.3}
+.nd-foot{margin-top:auto;border-top:1px solid var(--line);padding:24px 0;font-size:13px;color:var(--muted)}
+.nd-foot .nd-wrap{display:flex;justify-content:space-between;gap:12px}
+.nd-foot a{color:var(--ink2);text-decoration:none}
+@media (max-width:900px){.nd-nav{display:none}}
+@media (max-width:640px){.nd-article h1{font-size:32px}.nd-lead{font-size:17px}.nd-more-grid{grid-template-columns:1fr}.nd-hero.contain img{padding:20px}.nd-theme{width:40px;height:40px}}

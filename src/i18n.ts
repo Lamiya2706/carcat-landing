@@ -145,6 +145,8 @@ export const AZ: Record<string, string> = {
   "A buyer or mechanic scans it and gets this report as a PDF.": "Alıcı və ya usta skan edib bu hesabatı PDF kimi alır.",
   "Open sample": "Nümunəyə bax",
   "PDF · 3 pages · sample": "PDF · 3 səhifə · nümunə",
+  "All news": "Bütün xəbərlər",
+  "More news": "Digər xəbərlər",
   // dynamic labels
   "Drag to explore": "Sürüşdürərək baxın",
   "Add car": "Avtomobil",
