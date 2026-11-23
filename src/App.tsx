@@ -395,7 +395,7 @@ export default function App() {
       <span className="ig-avatar" style={{flex: "0 0 auto", width: "60px", height: "60px", borderRadius: "50%", padding: "3px", background: `conic-gradient(from 200deg, ${v.accent}, #22c55e, ${v.accent})`, display: "flex", alignItems: "center", justifyContent: "center", boxSizing: "border-box"}}><span style={{width: "100%", height: "100%", borderRadius: "50%", background: "var(--card)", display: "flex", alignItems: "center", justifyContent: "center", border: "3px solid var(--card)", boxSizing: "border-box", overflow: "hidden"}}><img className="cc-logo" src={img_bec8cbd1} alt="" style={{width: "86%", height: "auto", display: "block"}} /></span></span>
       <div style={{display: "flex", flexDirection: "column", gap: "4px"}}>
       <span style={{fontSize: "12px", fontWeight: "700", letterSpacing: "0.08em", textTransform: "uppercase", color: v.accent}}>{t("Stay in the loop")}</span>
-      <h2 style={{margin: "0", fontFamily: "Manrope, Inter, sans-serif", fontSize: "28px", fontWeight: "800", letterSpacing: "-0.03em", lineHeight: "1.1", color: "#ffffff"}}>{t("Follow CarCat")} <span style={{color: "#8a8a8a", fontWeight: "700", fontSize: "16px"}}>{t("@carcat")}</span></h2>
+      <h2 style={{margin: "0", fontFamily: "Manrope, Inter, sans-serif", fontSize: "28px", fontWeight: "800", letterSpacing: "-0.03em", lineHeight: "1.1", color: "#ffffff"}}>{t("Follow CarCat")} <span style={{color: "#8a8a8a", fontWeight: "700", fontSize: "16px"}}>{t("@carcat.app")}</span></h2>
       <span style={{fontSize: "14px", color: "#c4c4c4", lineHeight: "1.5"}}>{t("Car care tips, new partners and app updates, every week.")}</span>
       </div>
       </div>
