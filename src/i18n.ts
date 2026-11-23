@@ -134,6 +134,7 @@ export const AZ: Record<string, string> = {
   "Get CarCat": "CarCat-ı yüklə",
   "Scan with your phone camera,": "Telefon kamerası ilə skan edin,",
   "it opens the right store": "uyğun mağaza açılacaq",
+  "Backed by": "Dəstəkləyənlər",
   // dynamic labels
   "Drag to explore": "Sürüşdürərək baxın",
   "Add car": "Avtomobil",
