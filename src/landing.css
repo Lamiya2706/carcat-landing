@@ -374,3 +374,4 @@ a.mp-tag:hover{border-color:#C6F24E!important}
 .cc-root.dark .nw-track img{filter:brightness(.94)}
 .cc-root.dark .ft-preview{background:#ececE7!important;border-color:transparent!important}
 .cc-root.dark .hw-c{border-color:#C6F24E!important}
+.cc-root.dark .sp-tile img,.cc-root.dark .pt-tile img,.cc-root.dark .lg-tile img{mix-blend-mode:multiply}
