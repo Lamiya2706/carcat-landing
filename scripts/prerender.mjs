@@ -111,3 +111,10 @@ fs.writeFileSync(path.join(dist, "404.html"),
   `<meta http-equiv="refresh" content="0; url=${base}"><link rel="canonical" href="${abs("")}"></head>` +
   `<body><p>Page not found. <a href="${base}">Go to CarCat</a></p></body></html>`);
 console.log("prerendered", urls.length, "pages for", site);
+
+// version.json: lets pages that a browser served from its cache notice a newer deploy and reload once.
+const entry = (html) => (html.match(/assets\/[\w-]+\.js/) || [""])[0].split("/").pop();
+fs.writeFileSync(path.join(dist, "version.json"), JSON.stringify({
+  main: entry(fs.readFileSync(path.join(dist, "index.html"), "utf8")),
+  admin: fs.existsSync(path.join(dist, "admin/index.html")) ? entry(fs.readFileSync(path.join(dist, "admin/index.html"), "utf8")) : "",
+}) + "\n");

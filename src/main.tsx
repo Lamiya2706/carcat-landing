@@ -3,6 +3,9 @@ import ReactDOM from "react-dom/client";
 import Router from "./Router";
 import { currentRoute } from "./news";
 import "./landing.css";
+import { reloadIfStale } from "./stale";
+
+reloadIfStale("main");
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
