@@ -265,45 +265,6 @@ export default function App() {
       </section>
 )}
 
-      {/* PARTNER CENTERS */}
-      {isShown("partners-centers") && (
-<section id="partners-centers" className={v.rv_brands} data-rv="brands" aria-label="Service centers and brands on CarCat" style={{order: "1", background: "var(--soft)"}}>
-      <div style={{maxWidth: "1200px", margin: "0 auto", padding: "42px 24px", display: "flex", flexDirection: "column", gap: "40px"}}>
-      <div style={{display: "flex", justifyContent: "space-between", alignItems: "flex-end", flexWrap: "wrap", gap: "16px"}}>
-      <div style={{display: "flex", flexDirection: "column", gap: "12px"}}>
-      <span style={{display: "inline-flex", alignItems: "center", gap: "8px", fontSize: "13px", fontWeight: "600", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--muted)"}}><span className="sv-live" style={{width: "8px", height: "8px", borderRadius: "50%", background: "#22c55e"}}></span>{t("Live in Baku")}</span>
-      <h2 style={{margin: "0", fontFamily: "Manrope, Inter, sans-serif", fontSize: "48px", fontWeight: "800", letterSpacing: "-0.03em", lineHeight: "1.08"}}>{t("Already on CarCat")}</h2>
-      </div>
-      <span style={{fontSize: "16px", color: "var(--ink2)", maxWidth: "360px", lineHeight: "1.55"}}>{t("Tap a partner to see where you can book it across the city.")}</span>
-      </div>
-      <div style={{display: "flex", flexWrap: "wrap", gap: "20px", alignItems: "stretch"}}>
-      <div style={{position: "relative", flex: "999 1 560px", minWidth: "0", minHeight: "440px", borderRadius: "28px", overflow: "hidden", background: "var(--card)", border: "1px solid var(--line)"}}>
-      <div className="mp-pan" ref={v.mapRef} {...v.mapDrag} style={{position: "absolute", left: "-20%", top: "-20%", width: "140%", height: "140%"}}>
-      <svg viewBox="0 0 600 420" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-hidden="true" style={{position: "absolute", inset: "0", display: "block"}}>
-      <rect width="600" height="420" style={{fill: "var(--soft2)"}}></rect>
-      <path d="M40 210 C 140 190, 220 150, 330 160 S 520 120, 590 90" stroke="var(--card)" strokeWidth="9" fill="none" strokeLinecap="round"></path><path d="M60 90 C 160 120, 260 120, 360 90 S 500 40, 580 30" stroke="var(--card)" strokeWidth="6" fill="none" strokeLinecap="round"></path><path d="M180 30 C 200 120, 230 200, 250 300" stroke="var(--card)" strokeWidth="7" fill="none" strokeLinecap="round"></path><path d="M380 20 C 370 110, 400 190, 440 260" stroke="var(--card)" strokeWidth="7" fill="none" strokeLinecap="round"></path><path d="M90 300 C 180 260, 300 250, 420 240 S 540 210, 600 200" stroke="var(--card)" strokeWidth="6" fill="none" strokeLinecap="round"></path><path d="M500 30 L 520 200" stroke="var(--card)" strokeWidth="5" fill="none" strokeLinecap="round"></path>
-      <path d="M0 300 C 80 290, 150 300, 210 318 C 260 334, 300 300, 350 290 C 410 278, 470 300, 520 270 C 560 250, 590 255, 600 250 L 600 420 L 0 420 Z" style={{fill: "var(--t-blue)"}}></path>
-      <path className="mp-wave" d="M20 355 q 20 -6 40 0 t 40 0 t 40 0 M200 380 q 20 -6 40 0 t 40 0 t 40 0 M380 350 q 20 -6 40 0 t 40 0 t 40 0" stroke="rgba(59,130,246,0.25)" strokeWidth="1.5" fill="none"></path>
-      <text x="150" y="85" style={{fill: "var(--muted)"}} fontSize="11" fontWeight="600" fontFamily="Inter, sans-serif" letterSpacing="1.5">BINAGADI</text><text x="95" y="240" style={{fill: "var(--muted)"}} fontSize="11" fontWeight="600" fontFamily="Inter, sans-serif" letterSpacing="1.5">YASAMAL</text><text x="225" y="175" style={{fill: "var(--muted)"}} fontSize="11" fontWeight="600" fontFamily="Inter, sans-serif" letterSpacing="1.5">NASIMI</text><text x="345" y="120" style={{fill: "var(--muted)"}} fontSize="11" fontWeight="600" fontFamily="Inter, sans-serif" letterSpacing="1.5">NARIMANOV</text><text x="440" y="205" style={{fill: "var(--muted)"}} fontSize="11" fontWeight="600" fontFamily="Inter, sans-serif" letterSpacing="1.5">KHATAI</text><text x="505" y="140" style={{fill: "var(--muted)"}} fontSize="11" fontWeight="600" fontFamily="Inter, sans-serif" letterSpacing="1.5">NIZAMI</text><text x="285" y="250" style={{fill: "var(--muted)"}} fontSize="11" fontWeight="600" fontFamily="Inter, sans-serif" letterSpacing="1.5">SABAIL</text><text x="300" y="345" style={{fill: "var(--muted)"}} fontSize="11" fontWeight="600" fontFamily="Inter, sans-serif" letterSpacing="1.5">BAKU BAY</text><text x="470" y="375" style={{fill: "var(--muted)"}} fontSize="11" fontWeight="600" fontFamily="Inter, sans-serif" letterSpacing="1.5">CASPIAN SEA</text>
-      </svg>
-      {CENTERS.flatMap((c) => c.locations.map((l, li) => (
-      <span key={c.id + li} className={v.pc(c.id)} style={{position: "absolute", left: l.x + "%", top: l.y + "%", width: "0", height: "0"}}><span className="mp-ring" style={{position: "absolute", left: "-18px", top: "-18px", width: "36px", height: "36px", borderRadius: "50%", background: v.accent, opacity: "0.35"}}></span>{c.soon
-        ? <span className="mp-dot" style={{position: "absolute", left: "-13px", top: "-13px", width: "26px", height: "26px", borderRadius: "50%", background: "var(--card)", border: "2px dashed var(--muted)", boxSizing: "border-box", display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 8px 18px -8px rgba(0,0,0,0.45)"}}><svg width="12" height="12" viewBox="0 0 24 24" fill="none" strokeWidth="2.6" strokeLinecap="round" aria-hidden="true" style={{stroke: "var(--muted)"}}><circle cx="12" cy="12" r="8"></circle></svg></span>
-        : <span className="mp-dot" style={{position: "absolute", left: "-13px", top: "-13px", width: "26px", height: "26px", borderRadius: "50%", background: "var(--band)", border: "3px solid var(--card)", boxSizing: "border-box", display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 8px 18px -8px rgba(0,0,0,0.45)"}}><span style={{width: "8px", height: "8px", borderRadius: "50%", background: v.accent}}></span></span>}<a className="mp-tag" href={"https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(l.mapsQuery).replace(/%20/g, "+")} target="_blank" rel="noopener noreferrer" title={t("Open in Google Maps")} style={{position: "absolute", left: "18px", top: "-16px", whiteSpace: "nowrap", background: "var(--card)", border: "1px solid var(--line)", color: "var(--ink)", borderRadius: "12px", padding: "6px 10px", fontSize: "12px", fontWeight: "700", boxShadow: "0 12px 24px -16px rgba(0,0,0,0.4)"}}>{c.name} <span style={{color: "var(--muted)", fontWeight: "500"}}>{"· " + l.district[v.lang as "en" | "az"] + (c.soon ? " · " + t("soon") : "")}</span></a></span>
-      )))}
-      </div>
-      <span className="mp-hint" aria-hidden="true">{t("Drag to explore")}</span>
-      <span style={{position: "absolute", left: "16px", bottom: "16px", background: "var(--card)", border: "1px solid var(--line)", borderRadius: "999px", padding: "6px 12px", fontSize: "12px", fontWeight: "600", color: "var(--ink2)"}}>{t("Baku · partner locations")}</span>
-      </div>
-      <div style={{flex: "1 1 320px", minWidth: "0", display: "flex", flexDirection: "column", gap: "12px", justifyContent: "center"}}>
-      {CENTERS.map((c) => (
-      <button key={c.id} type="button" className={v.cc(c.id)} onMouseEnter={v.hv(c.id)} onMouseLeave={v.hvOff} onFocus={v.hv(c.id)} onBlur={v.hvOff} onClick={v.hv(c.id)} style={{width: "100%", textAlign: "left", font: "inherit", color: "var(--ink)", cursor: "pointer", display: "flex", alignItems: "center", gap: "14px", background: "var(--card)", border: "1px solid var(--line)", borderRadius: "20px", padding: "12px", minHeight: "44px", position: "relative", overflow: "hidden"}}><span className="mp-prog" aria-hidden="true" style={{position: "absolute", left: "0", bottom: "0", height: "3px", width: "0", background: v.accent}}></span><span style={{flex: "0 0 auto", width: "92px", height: "56px", borderRadius: "14px", background: "#ffffff", border: "1px solid #ececec", display: "flex", alignItems: "center", justifyContent: "center", padding: "8px", boxSizing: "border-box"}}><img loading="lazy" decoding="async" src={media(c.logo)} alt={c.name} style={{maxHeight: "30px", maxWidth: "100%", width: "auto", height: "auto", display: "block", ...(c.soon ? {opacity: "0.5", filter: "grayscale(1)"} : {})}} /></span><span style={{flex: "1", display: "flex", flexDirection: "column", gap: "3px", minWidth: "0"}}><span style={{display: "flex", alignItems: "center", gap: "8px"}}><span style={{fontFamily: "Manrope, Inter, sans-serif", fontSize: "17px", fontWeight: "800"}}>{c.name}</span>{c.soon && <span style={{background: v.accent, color: "#111111", borderRadius: "999px", padding: "3px 9px", fontSize: "11px", fontWeight: "800"}}>{t("Soon")}</span>}</span><span style={{fontSize: "13px", color: "var(--muted)"}}>{c.category[v.lang as "en" | "az"]}</span></span><span style={{flex: "0 0 auto", background: "var(--soft)", borderRadius: "999px", padding: "5px 10px", fontSize: "12px", fontWeight: "700", color: "var(--ink2)"}}>{c.soon ? t("Coming soon") : v.locCount(c.locations.length)}</span></button>
-      ))}
-      </div>
-      </div>
-      </div>
-      </section>
-)}
 
       {/* FOR SERVICE CENTERS */}
       {isShown("centers") && (
@@ -350,7 +311,7 @@ export default function App() {
 
       {/* INSTAGRAM */}
       {isShown("instagram-feed") && (
-<section id="instagram-feed" className={v.rv_insta} data-rv="insta" aria-label="CarCat on Instagram" style={{order: "1"}}>
+<section id="instagram-feed" className={v.rv_insta} data-rv="insta" aria-label="CarCat on Instagram">
       <div style={{maxWidth: "1200px", margin: "0 auto", padding: "42px 24px", display: "flex", flexDirection: "column"}}>
       <div style={{position: "relative", overflow: "hidden", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "24px", background: "var(--band)", color: "#ffffff", borderRadius: "28px", padding: "28px 32px"}}>
       <span className="so-glow" aria-hidden="true" style={{position: "absolute", right: "-90px", top: "-140px", width: "340px", height: "340px", borderRadius: "50%", background: `radial-gradient(circle, ${v.accent} 0%, transparent 65%)`, pointerEvents: "none"}}></span>
@@ -408,8 +369,48 @@ export default function App() {
 </section>
 )}
 
+      {/* PARTNER CENTERS */}
+      {isShown("partners-centers") && (
+<section id="partners-centers" className={v.rv_brands} data-rv="brands" aria-label="Service centers and brands on CarCat" style={{background: "var(--soft)"}}>
+      <div style={{maxWidth: "1200px", margin: "0 auto", padding: "42px 24px", display: "flex", flexDirection: "column", gap: "40px"}}>
+      <div style={{display: "flex", justifyContent: "space-between", alignItems: "flex-end", flexWrap: "wrap", gap: "16px"}}>
+      <div style={{display: "flex", flexDirection: "column", gap: "12px"}}>
+      <span style={{display: "inline-flex", alignItems: "center", gap: "8px", fontSize: "13px", fontWeight: "600", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--muted)"}}><span className="sv-live" style={{width: "8px", height: "8px", borderRadius: "50%", background: "#22c55e"}}></span>{t("Live in Baku")}</span>
+      <h2 style={{margin: "0", fontFamily: "Manrope, Inter, sans-serif", fontSize: "48px", fontWeight: "800", letterSpacing: "-0.03em", lineHeight: "1.08"}}>{t("Already on CarCat")}</h2>
+      </div>
+      <span style={{fontSize: "16px", color: "var(--ink2)", maxWidth: "360px", lineHeight: "1.55"}}>{t("Tap a partner to see where you can book it across the city.")}</span>
+      </div>
+      <div style={{display: "flex", flexWrap: "wrap", gap: "20px", alignItems: "stretch"}}>
+      <div style={{position: "relative", flex: "999 1 560px", minWidth: "0", minHeight: "440px", borderRadius: "28px", overflow: "hidden", background: "var(--card)", border: "1px solid var(--line)"}}>
+      <div className="mp-pan" ref={v.mapRef} {...v.mapDrag} style={{position: "absolute", left: "-20%", top: "-20%", width: "140%", height: "140%"}}>
+      <svg viewBox="0 0 600 420" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-hidden="true" style={{position: "absolute", inset: "0", display: "block"}}>
+      <rect width="600" height="420" style={{fill: "var(--soft2)"}}></rect>
+      <path d="M40 210 C 140 190, 220 150, 330 160 S 520 120, 590 90" stroke="var(--card)" strokeWidth="9" fill="none" strokeLinecap="round"></path><path d="M60 90 C 160 120, 260 120, 360 90 S 500 40, 580 30" stroke="var(--card)" strokeWidth="6" fill="none" strokeLinecap="round"></path><path d="M180 30 C 200 120, 230 200, 250 300" stroke="var(--card)" strokeWidth="7" fill="none" strokeLinecap="round"></path><path d="M380 20 C 370 110, 400 190, 440 260" stroke="var(--card)" strokeWidth="7" fill="none" strokeLinecap="round"></path><path d="M90 300 C 180 260, 300 250, 420 240 S 540 210, 600 200" stroke="var(--card)" strokeWidth="6" fill="none" strokeLinecap="round"></path><path d="M500 30 L 520 200" stroke="var(--card)" strokeWidth="5" fill="none" strokeLinecap="round"></path>
+      <path d="M0 300 C 80 290, 150 300, 210 318 C 260 334, 300 300, 350 290 C 410 278, 470 300, 520 270 C 560 250, 590 255, 600 250 L 600 420 L 0 420 Z" style={{fill: "var(--t-blue)"}}></path>
+      <path className="mp-wave" d="M20 355 q 20 -6 40 0 t 40 0 t 40 0 M200 380 q 20 -6 40 0 t 40 0 t 40 0 M380 350 q 20 -6 40 0 t 40 0 t 40 0" stroke="rgba(59,130,246,0.25)" strokeWidth="1.5" fill="none"></path>
+      <text x="150" y="85" style={{fill: "var(--muted)"}} fontSize="11" fontWeight="600" fontFamily="Inter, sans-serif" letterSpacing="1.5">BINAGADI</text><text x="95" y="240" style={{fill: "var(--muted)"}} fontSize="11" fontWeight="600" fontFamily="Inter, sans-serif" letterSpacing="1.5">YASAMAL</text><text x="225" y="175" style={{fill: "var(--muted)"}} fontSize="11" fontWeight="600" fontFamily="Inter, sans-serif" letterSpacing="1.5">NASIMI</text><text x="345" y="120" style={{fill: "var(--muted)"}} fontSize="11" fontWeight="600" fontFamily="Inter, sans-serif" letterSpacing="1.5">NARIMANOV</text><text x="440" y="205" style={{fill: "var(--muted)"}} fontSize="11" fontWeight="600" fontFamily="Inter, sans-serif" letterSpacing="1.5">KHATAI</text><text x="505" y="140" style={{fill: "var(--muted)"}} fontSize="11" fontWeight="600" fontFamily="Inter, sans-serif" letterSpacing="1.5">NIZAMI</text><text x="285" y="250" style={{fill: "var(--muted)"}} fontSize="11" fontWeight="600" fontFamily="Inter, sans-serif" letterSpacing="1.5">SABAIL</text><text x="300" y="345" style={{fill: "var(--muted)"}} fontSize="11" fontWeight="600" fontFamily="Inter, sans-serif" letterSpacing="1.5">BAKU BAY</text><text x="470" y="375" style={{fill: "var(--muted)"}} fontSize="11" fontWeight="600" fontFamily="Inter, sans-serif" letterSpacing="1.5">CASPIAN SEA</text>
+      </svg>
+      {CENTERS.flatMap((c) => c.locations.map((l, li) => (
+      <span key={c.id + li} className={v.pc(c.id)} style={{position: "absolute", left: l.x + "%", top: l.y + "%", width: "0", height: "0"}}><span className="mp-ring" style={{position: "absolute", left: "-18px", top: "-18px", width: "36px", height: "36px", borderRadius: "50%", background: v.accent, opacity: "0.35"}}></span>{c.soon
+        ? <span className="mp-dot" style={{position: "absolute", left: "-13px", top: "-13px", width: "26px", height: "26px", borderRadius: "50%", background: "var(--card)", border: "2px dashed var(--muted)", boxSizing: "border-box", display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 8px 18px -8px rgba(0,0,0,0.45)"}}><svg width="12" height="12" viewBox="0 0 24 24" fill="none" strokeWidth="2.6" strokeLinecap="round" aria-hidden="true" style={{stroke: "var(--muted)"}}><circle cx="12" cy="12" r="8"></circle></svg></span>
+        : <span className="mp-dot" style={{position: "absolute", left: "-13px", top: "-13px", width: "26px", height: "26px", borderRadius: "50%", background: "var(--band)", border: "3px solid var(--card)", boxSizing: "border-box", display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 8px 18px -8px rgba(0,0,0,0.45)"}}><span style={{width: "8px", height: "8px", borderRadius: "50%", background: v.accent}}></span></span>}<a className="mp-tag" href={"https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(l.mapsQuery).replace(/%20/g, "+")} target="_blank" rel="noopener noreferrer" title={t("Open in Google Maps")} style={{position: "absolute", left: "18px", top: "-16px", whiteSpace: "nowrap", background: "var(--card)", border: "1px solid var(--line)", color: "var(--ink)", borderRadius: "12px", padding: "6px 10px", fontSize: "12px", fontWeight: "700", boxShadow: "0 12px 24px -16px rgba(0,0,0,0.4)"}}>{c.name} <span style={{color: "var(--muted)", fontWeight: "500"}}>{"· " + l.district[v.lang as "en" | "az"] + (c.soon ? " · " + t("soon") : "")}</span></a></span>
+      )))}
+      </div>
+      <span className="mp-hint" aria-hidden="true">{t("Drag to explore")}</span>
+      <span style={{position: "absolute", left: "16px", bottom: "16px", background: "var(--card)", border: "1px solid var(--line)", borderRadius: "999px", padding: "6px 12px", fontSize: "12px", fontWeight: "600", color: "var(--ink2)"}}>{t("Baku · partner locations")}</span>
+      </div>
+      <div style={{flex: "1 1 320px", minWidth: "0", display: "flex", flexDirection: "column", gap: "12px", justifyContent: "center"}}>
+      {CENTERS.map((c) => (
+      <button key={c.id} type="button" className={v.cc(c.id)} onMouseEnter={v.hv(c.id)} onMouseLeave={v.hvOff} onFocus={v.hv(c.id)} onBlur={v.hvOff} onClick={v.hv(c.id)} style={{width: "100%", textAlign: "left", font: "inherit", color: "var(--ink)", cursor: "pointer", display: "flex", alignItems: "center", gap: "14px", background: "var(--card)", border: "1px solid var(--line)", borderRadius: "20px", padding: "12px", minHeight: "44px", position: "relative", overflow: "hidden"}}><span className="mp-prog" aria-hidden="true" style={{position: "absolute", left: "0", bottom: "0", height: "3px", width: "0", background: v.accent}}></span><span style={{flex: "0 0 auto", width: "92px", height: "56px", borderRadius: "14px", background: "#ffffff", border: "1px solid #ececec", display: "flex", alignItems: "center", justifyContent: "center", padding: "8px", boxSizing: "border-box"}}><img loading="lazy" decoding="async" src={media(c.logo)} alt={c.name} style={{maxHeight: "30px", maxWidth: "100%", width: "auto", height: "auto", display: "block", ...(c.soon ? {opacity: "0.5", filter: "grayscale(1)"} : {})}} /></span><span style={{flex: "1", display: "flex", flexDirection: "column", gap: "3px", minWidth: "0"}}><span style={{display: "flex", alignItems: "center", gap: "8px"}}><span style={{fontFamily: "Manrope, Inter, sans-serif", fontSize: "17px", fontWeight: "800"}}>{c.name}</span>{c.soon && <span style={{background: v.accent, color: "#111111", borderRadius: "999px", padding: "3px 9px", fontSize: "11px", fontWeight: "800"}}>{t("Soon")}</span>}</span><span style={{fontSize: "13px", color: "var(--muted)"}}>{c.category[v.lang as "en" | "az"]}</span></span><span style={{flex: "0 0 auto", background: "var(--soft)", borderRadius: "999px", padding: "5px 10px", fontSize: "12px", fontWeight: "700", color: "var(--ink2)"}}>{c.soon ? t("Coming soon") : v.locCount(c.locations.length)}</span></button>
+      ))}
+      </div>
+      </div>
+      </div>
+      </section>
+)}
+
       {/* FOOTER */}
-      <footer style={{order: "2", borderTop: "1px solid var(--line)"}}>
+      <footer style={{borderTop: "1px solid var(--line)"}}>
       <div style={{maxWidth: "1200px", margin: "0 auto", padding: "48px 24px", display: "flex", flexWrap: "wrap", gap: "40px", justifyContent: "space-between"}}>
       <div style={{flex: "1 1 280px", display: "flex", flexDirection: "column", gap: "12px"}}>
       <img src={img_bec8cbd1} className="cc-logo" alt="CarCat, always ready to drive" style={{height: "44px", width: "auto", display: "block", alignSelf: "flex-start"}} />

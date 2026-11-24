@@ -385,51 +385,6 @@
   "az": "PDF-i aç"
  },
  {
-  "key": "Live in Baku",
-  "section": "Partners map",
-  "az": "Bakıda fəaliyyətdədir"
- },
- {
-  "key": "Already on CarCat",
-  "section": "Partners map",
-  "az": "Artıq CarCat-dadır"
- },
- {
-  "key": "Tap a partner to see where you can book it across the city.",
-  "section": "Partners map",
-  "az": "Tərəfdaşı seçin və şəhərdə harada xidmətə yazıla biləcəyinizi görün."
- },
- {
-  "key": "Open in Google Maps",
-  "section": "Partners map",
-  "az": "Google Maps-də aç"
- },
- {
-  "key": "soon",
-  "section": "Partners map",
-  "az": "tezliklə"
- },
- {
-  "key": "Drag to explore",
-  "section": "Partners map",
-  "az": "Xəritəni sürüşdürün"
- },
- {
-  "key": "Baku · partner locations",
-  "section": "Partners map",
-  "az": "Bakı · tərəfdaş ünvanları"
- },
- {
-  "key": "Soon",
-  "section": "Partners map",
-  "az": "Tezliklə"
- },
- {
-  "key": "Coming soon",
-  "section": "Partners map",
-  "az": "Tezliklə"
- },
- {
   "key": "Get bookings from drivers who already need you.",
   "section": "For service centers",
   "az": "Sizə artıq ehtiyacı olan sürücülərdən rezervlər qəbul edin."
@@ -543,6 +498,51 @@
   "key": "our partners",
   "section": "Partners strip",
   "az": "tərəfdaşlarımız"
+ },
+ {
+  "key": "Live in Baku",
+  "section": "Partners map",
+  "az": "Bakıda fəaliyyətdədir"
+ },
+ {
+  "key": "Already on CarCat",
+  "section": "Partners map",
+  "az": "Artıq CarCat-dadır"
+ },
+ {
+  "key": "Tap a partner to see where you can book it across the city.",
+  "section": "Partners map",
+  "az": "Tərəfdaşı seçin və şəhərdə harada xidmətə yazıla biləcəyinizi görün."
+ },
+ {
+  "key": "Open in Google Maps",
+  "section": "Partners map",
+  "az": "Google Maps-də aç"
+ },
+ {
+  "key": "soon",
+  "section": "Partners map",
+  "az": "tezliklə"
+ },
+ {
+  "key": "Drag to explore",
+  "section": "Partners map",
+  "az": "Xəritəni sürüşdürün"
+ },
+ {
+  "key": "Baku · partner locations",
+  "section": "Partners map",
+  "az": "Bakı · tərəfdaş ünvanları"
+ },
+ {
+  "key": "Soon",
+  "section": "Partners map",
+  "az": "Tezliklə"
+ },
+ {
+  "key": "Coming soon",
+  "section": "Partners map",
+  "az": "Tezliklə"
  },
  {
   "key": "Your all-in-one car maintenance companion.",

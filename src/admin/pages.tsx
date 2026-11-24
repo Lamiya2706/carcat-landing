@@ -434,12 +434,12 @@ function TextRowEdit({ k, o, onSave, showSection }: { k: KeyInfo; o?: TextRow; o
 const SECTIONS: { id: string; name: string; sub: string }[] = [
   { id: "partners", name: "Sponsors", sub: "“Backed by our sponsors” grid under the hero" },
   { id: "how", name: "How it works", sub: "Three steps, the history card and features" },
-  { id: "partners-centers", name: "Partners map", sub: "“Already on CarCat” map of service centers" },
   { id: "centers", name: "For service centers", sub: "Black band with “Become a partner”" },
   { id: "news", name: "News", sub: "“Latest from CarCat” carousel" },
   { id: "instagram-feed", name: "Follow strip", sub: "Instagram / socials banner" },
   { id: "team", name: "Team", sub: "Founding team cards" },
   { id: "partners-logos", name: "Partners strip", sub: "“Working with our partners” logos" },
+  { id: "partners-centers", name: "Partners map", sub: "“Already on CarCat” map of service centers" },
 ];
 
 export function SectionsPage() {
