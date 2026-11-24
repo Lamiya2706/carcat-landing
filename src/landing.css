@@ -381,3 +381,16 @@ a.mp-tag:hover{border-color:#C6F24E!important}
 .cc-root.dark .nd-hero.contain img,.cc-root.dark .nd-card-img.contain img{mix-blend-mode:multiply}
 .cc-root.dark .mp-card img{mix-blend-mode:multiply}
 .cc-root.dark .mp-card span:has(> img){background:#ececE7!important;border-color:transparent!important}
+
+/* Follow CarCat banner on phones: stacked header, three equal social tiles, less space above */
+@media (max-width:640px){
+  .so-wrap{padding:8px 20px 40px!important}
+  .so-card{flex-direction:column;align-items:stretch!important;gap:22px!important;padding:24px 20px!important;border-radius:24px!important}
+  .so-head{flex-direction:column;align-items:flex-start!important;gap:14px!important}
+  .so-head .ig-avatar{width:52px!important;height:52px!important}
+  .so-title{font-size:26px!important}
+  .so-handle{display:block;margin-top:6px;font-size:15px!important}
+  .so-pills{display:grid!important;grid-template-columns:repeat(3,1fr);gap:8px!important;width:100%}
+  .so-pills .so-pill{flex-direction:column;justify-content:center;gap:8px!important;padding:14px 6px!important;border-radius:18px!important;font-size:13px!important;text-align:center}
+  .so-pills .so-pill svg{width:22px;height:22px}
+}
