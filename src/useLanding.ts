@@ -139,6 +139,15 @@ export function useLanding() {
     return () => io.disconnect();
   }, []);
 
+  // pause looping animations in sections that are off screen (saves battery and CPU on phones)
+  useEffect(() => {
+    if (typeof IntersectionObserver === "undefined") return;
+    const els = Array.from(document.querySelectorAll<HTMLElement>(".cc-root > section, .cc-root > header"));
+    const io = new IntersectionObserver((entries) => entries.forEach((e) => e.target.classList.toggle("cc-off", !e.isIntersecting)), { rootMargin: "200px 0px" });
+    els.forEach((el) => io.observe(el));
+    return () => io.disconnect();
+  }, []);
+
   // theme + language side effects
   useEffect(() => {
     writePref("cc-theme", dark ? "dark" : "light");

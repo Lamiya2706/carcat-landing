@@ -8,7 +8,11 @@ const dist = path.resolve("dist");
 const base = process.env.BASE_PATH ?? "/carcat-landing/";
 const site = (process.env.SITE_URL ?? "https://lamiya2706.github.io/carcat-landing").replace(/\/$/, "");
 const { render, NEWS, SITE: S } = await import(pathToFileURL(path.resolve("dist-ssr/entry-server.js")).href);
-const template = fs.readFileSync(path.join(dist, "index.html"), "utf8");
+// Preload the two fonts every page needs first (Latin Inter + Manrope), so text paints in its final font sooner.
+const fontPreloads = fs.readdirSync(path.join(dist, "assets"))
+  .filter((f) => /^(inter|manrope)-latin-wght-normal-.*\.woff2$/.test(f))
+  .map((f) => `<link rel="preload" href="${base}assets/${f}" as="font" type="font/woff2" crossorigin>`).join("");
+const template = fs.readFileSync(path.join(dist, "index.html"), "utf8").replace("</title>", "</title>" + fontPreloads);
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
 const abs = (p) => site + "/" + p.replace(/^\/+/, "");
 const toIso = (d) => new Date(d + " UTC").toISOString().slice(0, 10);
