@@ -28,6 +28,9 @@ const FIELD_LABEL: Record<string, string> = {
   kind: "Group", logo: "Logo", url: "Website", tall: "Tall logo", scale: "Logo size", "category.en": "Category (EN)", "category.az": "Category (AZ)", soon: "Coming soon", locations: "Locations",
 };
 
+/** JSON with sorted keys, so {en, az} and {az, en} compare equal. */
+const stable = (v: any): string =>
+  v && typeof v === "object" ? (Array.isArray(v) ? "[" + v.map(stable).join(",") + "]" : "{" + Object.keys(v).sort().map((k) => JSON.stringify(k) + ":" + stable(v[k])).join(",") + "}") : JSON.stringify(v);
 const clean = (o: any): Record<string, any> => {
   const { updated_at, ...rest } = o ?? {};
   return Object.fromEntries(Object.entries(rest).filter(([, v]) => v !== null && v !== undefined));
@@ -42,10 +45,10 @@ function diffFields(a: any, b: any) {
   const keys = new Set([...Object.keys(a), ...Object.keys(b)]);
   for (const k of keys) {
     const x = a[k], y = b[k];
-    if (JSON.stringify(x) === JSON.stringify(y)) continue;
+    if (stable(x) === stable(y)) continue;
     if (x && y && typeof x === "object" && !Array.isArray(x) && typeof y === "object" && !Array.isArray(y)) {
       for (const sub of new Set([...Object.keys(x), ...Object.keys(y)]))
-        if (JSON.stringify(x[sub]) !== JSON.stringify(y[sub])) out.push({ label: FIELD_LABEL[`${k}.${sub}`] ?? `${k}.${sub}`, before: show(x[sub]), after: show(y[sub]) });
+        if (stable(x[sub]) !== stable(y[sub])) out.push({ label: FIELD_LABEL[`${k}.${sub}`] ?? `${k}.${sub}`, before: show(x[sub]), after: show(y[sub]) });
     } else out.push({ label: FIELD_LABEL[k] ?? k, before: isImg(k) ? "image:" + (x ?? "") : show(x), after: isImg(k) ? "image:" + (y ?? "") : show(y) });
   }
   return out;
@@ -101,7 +104,7 @@ export async function loadChanges(): Promise<Change[]> {
   for (const k of new Set([...Object.keys(pubTexts), ...nowTexts.keys()])) {
     const p = pubTexts[k] ? clean(pubTexts[k]) : undefined;
     const n = nowTexts.get(k);
-    if (JSON.stringify(p ?? {}) === JSON.stringify(n ?? {})) continue;
+    if (stable(p ?? {}) === stable(n ?? {})) continue;
     const details = (["en", "az"] as const)
       .filter((l) => (p?.[l] ?? "") !== (n?.[l] ?? ""))
       .map((l) => ({ label: l.toUpperCase(), before: p?.[l] ?? "(original text)", after: n?.[l] ?? "(original text)" }));
