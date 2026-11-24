@@ -490,16 +490,6 @@
   "az": "CarCat-dan son xəbərlər"
  },
  {
-  "key": "Founding team",
-  "section": "Team",
-  "az": "Təsisçilər"
- },
- {
-  "key": "The people behind CarCat",
-  "section": "Team",
-  "az": "CarCat-ı yaradan komanda"
- },
- {
   "key": "Stay in the loop",
   "section": "Follow strip",
   "az": "Yeniliklərdən xəbərdar olun"
@@ -533,6 +523,16 @@
   "key": "TikTok",
   "section": "Follow strip",
   "az": ""
+ },
+ {
+  "key": "Founding team",
+  "section": "Team",
+  "az": "Təsisçilər"
+ },
+ {
+  "key": "The people behind CarCat",
+  "section": "Team",
+  "az": "CarCat-ı yaradan komanda"
  },
  {
   "key": "Working with",

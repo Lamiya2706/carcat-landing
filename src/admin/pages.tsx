@@ -437,8 +437,8 @@ const SECTIONS: { id: string; name: string; sub: string }[] = [
   { id: "partners-centers", name: "Partners map", sub: "“Already on CarCat” map of service centers" },
   { id: "centers", name: "For service centers", sub: "Black band with “Become a partner”" },
   { id: "news", name: "News", sub: "“Latest from CarCat” carousel" },
-  { id: "team", name: "Team", sub: "Founding team cards" },
   { id: "instagram-feed", name: "Follow strip", sub: "Instagram / socials banner" },
+  { id: "team", name: "Team", sub: "Founding team cards" },
   { id: "partners-logos", name: "Partners strip", sub: "“Working with our partners” logos" },
 ];
 
