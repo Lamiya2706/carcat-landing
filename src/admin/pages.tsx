@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { mediaUrl, sb, slugify } from "./supabase";
-import { markDeleted, Bilingual, Btn, Drawer, Field, ImagePick, PageHead, Reorder, Text, Toggle, toast, useTable, type Row } from "./ui";
+import { markDeleted, notifyChanged, Bilingual, Btn, Drawer, Field, ImagePick, PageHead, Reorder, Text, Toggle, toast, useTable, type Row } from "./ui";
 import TEXT_KEYS from "./text-keys.json";
 
 const fmtDate = (iso: string) => new Date(iso + "T00:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
@@ -373,6 +373,7 @@ export function TextsPage() {
       const { error } = await sb.from("texts").delete().eq("key", k.key);
       if (error) return toast(error.message, "err");
       await markDeleted();
+      notifyChanged();
       setOver(({ [k.key]: _, ...rest }) => rest);
       return toast("Back to the original text");
     }
@@ -380,6 +381,7 @@ export function TextsPage() {
     const { error } = await sb.from("texts").upsert(row);
     if (error) return toast(error.message, "err");
     setOver((o) => ({ ...o, [k.key]: row }));
+    notifyChanged();
     toast("Saved");
   };
   return (
@@ -436,8 +438,8 @@ const SECTIONS: { id: string; name: string; sub: string }[] = [
   { id: "centers", name: "For service centers", sub: "Black band with “Become a partner”" },
   { id: "news", name: "News", sub: "“Latest from CarCat” carousel" },
   { id: "team", name: "Team", sub: "Founding team cards" },
-  { id: "partners-logos", name: "Partners strip", sub: "“Working with our partners” logos" },
   { id: "instagram-feed", name: "Follow strip", sub: "Instagram / socials banner" },
+  { id: "partners-logos", name: "Partners strip", sub: "“Working with our partners” logos" },
 ];
 
 export function SectionsPage() {
@@ -450,7 +452,10 @@ export function SectionsPage() {
     setHidden(next);
     const { error } = await sb.from("settings").upsert({ key: "hidden", value: next, updated_at: new Date().toISOString() });
     if (error) toast(error.message, "err");
-    else toast(show ? "Section will be shown" : "Section will be hidden");
+    else {
+      notifyChanged();
+      toast(show ? "Section will be shown" : "Section will be hidden");
+    }
   };
   return (
     <>

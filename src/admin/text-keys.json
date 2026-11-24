@@ -500,16 +500,6 @@
   "az": "CarCat-ı yaradan komanda"
  },
  {
-  "key": "Working with",
-  "section": "Team",
-  "az": "Birlikdə çalışdığımız"
- },
- {
-  "key": "our partners",
-  "section": "Team",
-  "az": "tərəfdaşlarımız"
- },
- {
   "key": "Stay in the loop",
   "section": "Follow strip",
   "az": "Yeniliklərdən xəbərdar olun"
@@ -543,6 +533,16 @@
   "key": "TikTok",
   "section": "Follow strip",
   "az": ""
+ },
+ {
+  "key": "Working with",
+  "section": "Partners strip",
+  "az": "Birlikdə çalışdığımız"
+ },
+ {
+  "key": "our partners",
+  "section": "Partners strip",
+  "az": "tərəfdaşlarımız"
  },
  {
   "key": "Your all-in-one car maintenance companion.",

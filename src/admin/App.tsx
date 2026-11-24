@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 import type { Session } from "@supabase/supabase-js";
 import { sb } from "./supabase";
 import { Btn, Toasts, toast } from "./ui";
+import { ChangesPage, useChanges } from "./changes";
 import { CentersPage, NewsPage, OrgsPage, SectionsPage, TeamPage, TextsPage, Loading } from "./pages";
 import logo from "../assets/carcat-logo.png";
 
@@ -13,6 +14,7 @@ const TABS = [
   { id: "centers", label: "Service centers", icon: "M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21zM12 12a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z", el: CentersPage },
   { id: "texts", label: "Section texts", icon: "M4 6h16M4 12h10M4 18h13", el: TextsPage },
   { id: "sections", label: "Sections", icon: "M4 4h16v6H4zM4 14h16v6H4z", el: SectionsPage },
+  { id: "changes", label: "Unpublished changes", icon: "M12 8v4l3 2M3 12a9 9 0 1 0 3-6.7L3 8M3 3v5h5", el: ChangesPage },
 ] as const;
 
 const tabFromHash = () => (TABS.find((t) => "#" + t.id === location.hash)?.id ?? "news") as (typeof TABS)[number]["id"];
@@ -139,7 +141,7 @@ function SetPassword({ onDone }: { onDone: () => void }) {
 
 type Status = { status?: string; conclusion?: string | null; created_at?: string; url?: string; last_publish?: string; pending?: number };
 
-function Publish() {
+function Publish({ pending }: { pending: number }) {
   const [st, setSt] = useState<Status>({});
   const [busy, setBusy] = useState(false);
   const refresh = useCallback(async () => {
@@ -160,16 +162,18 @@ function Publish() {
     setBusy(false);
     if (error || data?.error) return toast("Publish failed: " + (data?.error ?? error?.message), "err");
     toast("Published — visitors see it now");
-    setSt((s) => ({ ...s, status: "queued", pending: 0 }));
+    setSt((s) => ({ ...s, status: "queued" }));
+    window.dispatchEvent(new Event("cms-changed"));
     setTimeout(refresh, 4000);
   };
   return (
     <div className="ad-publish">
-      <span className={"ad-dot " + (running ? "run" : failed ? "err" : st.pending ? "warn" : "ok")} />
+      <span className={"ad-dot " + (failed ? "err" : pending ? "warn" : running ? "run" : "ok")} />
       <span className="ad-publish-txt">
-        {running ? "Live · updating search version…" : failed ? <a href={st.url} target="_blank" rel="noreferrer">Last publish failed</a> : st.pending ? `${st.pending} unpublished change${st.pending === 1 ? "" : "s"}` : "Site is up to date"}
+        {failed ? <a href={st.url} target="_blank" rel="noreferrer">Last publish failed</a> : pending ? <a href="#changes">{pending} unpublished change{pending === 1 ? "" : "s"}</a> : running ? "Live · updating search version…" : "Site is up to date"}
       </span>
-      <Btn kind="dark" disabled={busy} onClick={go}>{busy ? "Publishing…" : "Publish"}</Btn>
+      {!!pending && <a href="#changes" className="ad-count-mobile">{pending}</a>}
+      <Btn kind="dark" disabled={busy || (!pending && !failed)} onClick={go}>{busy ? "Publishing…" : "Publish"}</Btn>
     </div>
   );
 }
@@ -191,6 +195,8 @@ function Shell({ email }: { email: string }) {
     };
   }, []);
   const Page = TABS.find((t) => t.id === tab)!.el;
+  const changes = useChanges();
+  const pending = changes.list?.length ?? 0;
   return (
     <div className="ad-shell">
       {nav && <div className="ad-side-bg" onClick={() => setNav(false)} aria-hidden="true" />}
@@ -204,6 +210,7 @@ function Shell({ email }: { email: string }) {
             <a key={t.id} href={"#" + t.id} className={tab === t.id ? "on" : ""} onClick={() => setNav(false)}>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d={t.icon} /></svg>
               {t.label}
+              {t.id === "changes" && pending > 0 && <span className="ad-badge">{pending}</span>}
             </a>
           ))}
         </nav>
@@ -217,7 +224,7 @@ function Shell({ email }: { email: string }) {
         <header className="ad-top">
           <button type="button" className="ad-burger" aria-label="Open menu" aria-expanded={nav} onClick={() => setNav(true)}>☰</button>
           <span className="ad-top-title">{TABS.find((t) => t.id === tab)!.label}</span>
-          <Publish />
+          <Publish pending={pending} />
         </header>
         <main className="ad-page" key={tab}><Page /></main>
       </div>

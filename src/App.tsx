@@ -361,27 +361,6 @@ export default function App() {
       </div>
       </section>
 )}
-{isShown("partners-logos") && (
-<section id="partners-logos" aria-label="Partners" style={{background: "var(--soft)", borderTop: "1px solid var(--line)"}}>
-<div style={{maxWidth: "1200px", margin: "0 auto", padding: "42px 24px"}}>
-<div className="lg-groups">
-      <div className="lg-block">
-        <h2 className="lg-title">{t("Working with")} <span className="lg-hl">{t("our partners")}</span></h2>
-        <div className="pt-marquee">
-          <div className="pt-track">
-            {[...PARTNERS, ...PARTNERS].map((it, k) => (
-              <a key={it.name + k} href={it.url} target="_blank" rel="noopener noreferrer" className={"lg-tile pt-tile" + (it.tall ? " tall" : "")} aria-label={it.name} title={it.name} aria-hidden={k >= PARTNERS.length ? true : undefined} tabIndex={k >= PARTNERS.length ? -1 : undefined}>
-                <img loading="lazy" decoding="async" src={media(it.logo)} alt={k >= PARTNERS.length ? "" : it.name} />
-              </a>
-            ))}
-          </div>
-        </div>
-      </div>
-</div>
-</div>
-</section>
-)}
-
       {/* INSTAGRAM */}
       {isShown("instagram-feed") && (
 <section id="instagram-feed" className={v.rv_insta} data-rv="insta" aria-label="CarCat on Instagram" style={{order: "1"}}>
@@ -405,6 +384,28 @@ export default function App() {
       </div>
       </div>
       </section>
+)}
+
+      {/* PARTNERS STRIP */}
+      {isShown("partners-logos") && (
+<section id="partners-logos" aria-label="Partners" style={{background: "var(--soft)", borderTop: "1px solid var(--line)"}}>
+<div style={{maxWidth: "1200px", margin: "0 auto", padding: "42px 24px"}}>
+<div className="lg-groups">
+      <div className="lg-block">
+        <h2 className="lg-title">{t("Working with")} <span className="lg-hl">{t("our partners")}</span></h2>
+        <div className="pt-marquee">
+          <div className="pt-track">
+            {[...PARTNERS, ...PARTNERS].map((it, k) => (
+              <a key={it.name + k} href={it.url} target="_blank" rel="noopener noreferrer" className={"lg-tile pt-tile" + (it.tall ? " tall" : "")} aria-label={it.name} title={it.name} aria-hidden={k >= PARTNERS.length ? true : undefined} tabIndex={k >= PARTNERS.length ? -1 : undefined}>
+                <img loading="lazy" decoding="async" src={media(it.logo)} alt={k >= PARTNERS.length ? "" : it.name} />
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+</div>
+</div>
+</section>
 )}
 
       {/* FOOTER */}

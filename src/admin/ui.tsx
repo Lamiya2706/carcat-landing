@@ -1,6 +1,9 @@
 import { useCallback, useEffect, useRef, useState, type ReactNode } from "react";
 import { mediaUrl, sb, uploadImage } from "./supabase";
 
+/** Fired after every save so the change list and the Publish badge stay current. */
+export const notifyChanged = () => window.dispatchEvent(new Event("cms-changed"));
+
 /** Deleted rows leave nothing behind to count, so record that something changed for the Publish badge. */
 export const markDeleted = () => sb.from("settings").upsert({ key: "last_delete", value: new Date().toISOString(), updated_at: new Date().toISOString() });
 
@@ -26,12 +29,14 @@ export function useTable<T extends Row>(table: string, key = "id", order = "sort
     const q = prevKey && prevKey !== clean[key] ? sb.from(table).update(clean).eq(key, prevKey) : sb.from(table).upsert(clean);
     const { error } = await q;
     if (error) throw new Error(error.message);
+    notifyChanged();
     await load();
   };
   const remove = async (id: string) => {
     const { error } = await sb.from(table).delete().eq(key, id);
     if (error) throw new Error(error.message);
     await markDeleted();
+    notifyChanged();
     await load();
   };
   /** Swap a row with its neighbour and renumber the list. */
@@ -47,6 +52,7 @@ export function useTable<T extends Row>(table: string, key = "id", order = "sort
       const { error } = await sb.from(table).update({ sort: u.sort, updated_at: now }).eq(key, u[key]);
       if (error) setError(error.message);
     }
+    notifyChanged();
   };
   return { rows, loading, error, setError, load, save, remove, move };
 }
