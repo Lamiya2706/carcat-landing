@@ -57,7 +57,7 @@
  {
   "key": "Routine care",
   "section": "Hero",
-  "az": "Dövri baxım"
+  "az": "Dövri qulluq"
  },
  {
   "key": "Individual services",
@@ -130,7 +130,7 @@
   "az": "Yürüş"
  },
  {
-  "key": "125 600 km",
+  "key": "95 502 km",
   "section": "Hero",
   "az": ""
  },
@@ -140,12 +140,12 @@
   "az": "Avtomobiliniz"
  },
  {
-  "key": "Toyota Camry",
+  "key": "Honda Insight",
   "section": "Hero",
   "az": ""
  },
  {
-  "key": "99-ES-002 · 2020",
+  "key": "77 BU 669 · 2022",
   "section": "Hero",
   "az": ""
  },
@@ -170,7 +170,7 @@
   "az": "Son servisdəki yürüş"
  },
  {
-  "key": "118 400 km",
+  "key": "90 531 km",
   "section": "Hero",
   "az": ""
  },
@@ -180,14 +180,14 @@
   "az": "Son rezerv"
  },
  {
-  "key": "HyperServis",
+  "key": "Castrol Premium Express",
   "section": "Hero",
   "az": ""
  },
  {
-  "key": "28 May St, Baku · 1.2 km",
+  "key": "Abbasqulu Abbaszade St 17 · 1.7 km",
   "section": "Hero",
-  "az": "28 May küç., Bakı · 1.2 km"
+  "az": "Abbasqulu Abbaszadə 17 · 1.7 km"
  },
  {
   "key": "Across Baku",
@@ -205,9 +205,9 @@
   "az": "Seçildi"
  },
  {
-  "key": "Regular maintenance",
+  "key": "Oil change, filters and other routine services",
   "section": "Hero",
-  "az": "Planlı texniki baxım"
+  "az": "Yağdəyişmə, filtrlər və digər dövri xidmətlər"
  },
  {
   "key": "Your service center",
@@ -215,9 +215,9 @@
   "az": "Servis mərkəziniz"
  },
  {
-  "key": "1.2 km away",
+  "key": "1.7 km away",
   "section": "Hero",
-  "az": "1.2 km məsafədə"
+  "az": "1.7 km məsafədə"
  },
  {
   "key": "Backed by",
