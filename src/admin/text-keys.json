@@ -235,36 +235,6 @@
   "az": "Həmişə yola hazır olmaq üçün üç addım."
  },
  {
-  "key": "JTNB11HK503214521",
-  "section": "How it works",
-  "az": ""
- },
- {
-  "key": "AZ",
-  "section": "How it works",
-  "az": ""
- },
- {
-  "key": "99-ES-002",
-  "section": "How it works",
-  "az": ""
- },
- {
-  "key": "VIN",
-  "section": "How it works",
-  "az": ""
- },
- {
-  "key": "Plate",
-  "section": "How it works",
-  "az": "Nömrə"
- },
- {
-  "key": "Toyota Camry 2020 found",
-  "section": "How it works",
-  "az": "Toyota Camry 2020 tapıldı"
- },
- {
   "key": "Add your car",
   "section": "How it works",
   "az": "Avtomobilinizi əlavə edin"
@@ -275,14 +245,14 @@
   "az": "VIN kodu skan edin və ya dövlət nömrəsini daxil edin. CarCat modeli tanıyır və məhz sizin avtomobiliniz üçün baxım planı hazırlayır."
  },
  {
-  "key": "126 800 km",
+  "key": "1 738 km left. Time to book a service",
   "section": "How it works",
-  "az": ""
+  "az": "1 738 km qalıb. Servisə yazılmaq vaxtıdır"
  },
  {
-  "key": "Due in 1 200 km",
+  "key": "now",
   "section": "How it works",
-  "az": "1 200 km sonra"
+  "az": "indi"
  },
  {
   "key": "Get your schedule",
@@ -293,51 +263,6 @@
   "key": "Log your last service and mileage. CarCat tells you what's due next, and reminds you before it's late.",
   "section": "How it works",
   "az": "Son servisi və cari yürüşü qeyd edin. CarCat növbəti baxımın vaxtını göstərir və gecikməmiş xatırladır."
- },
- {
-  "key": "Saturday, 22 November",
-  "section": "How it works",
-  "az": "Şənbə, 22 noyabr"
- },
- {
-  "key": "09:00",
-  "section": "How it works",
-  "az": ""
- },
- {
-  "key": "10:00",
-  "section": "How it works",
-  "az": ""
- },
- {
-  "key": "11:30",
-  "section": "How it works",
-  "az": ""
- },
- {
-  "key": "13:00",
-  "section": "How it works",
-  "az": ""
- },
- {
-  "key": "15:00",
-  "section": "How it works",
-  "az": ""
- },
- {
-  "key": "16:30",
-  "section": "How it works",
-  "az": ""
- },
- {
-  "key": "Confirm 10:00",
-  "section": "How it works",
-  "az": "10:00-ı təsdiqlə"
- },
- {
-  "key": "Booked ✓",
-  "section": "How it works",
-  "az": "Rezerv edildi ✓"
  },
  {
   "key": "Book a service",

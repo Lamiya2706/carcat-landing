@@ -98,6 +98,8 @@ export const AZ: Record<string, string> = {
   "Official service": "Rəsmi servis",
   "Soon": "Tezliklə",
   "soon": "tezliklə",
+  "1 738 km left. Time to book a service": "1 738 km qalıb. Servisə yazılmaq vaxtıdır",
+  "now": "indi",
   "Coming soon": "Tezliklə",
   "Get bookings from drivers who already need you.": "Sizə artıq ehtiyacı olan sürücülərdən rezervlər qəbul edin.",
   "CarCat drivers see when their car is due and book a free slot at your center. You get organized appointments and a digital record of every job.": "CarCat istifadəçiləri baxım vaxtının çatdığını görür və mərkəzinizdə boş vaxta yazılır. Siz nizamlı qəbul cədvəli və görülən hər işin rəqəmsal qeydini əldə edirsiniz.",

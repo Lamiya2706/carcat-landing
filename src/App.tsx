@@ -1,5 +1,12 @@
 /* eslint-disable */
 // Generated from the CarCat Claude Design source (tools/convert.py + tools/gen_app.py), then hand-wired.
+import app_plate0 from "./assets/app/s1-plate0.webp";
+import app_plate1 from "./assets/app/s1-plate1.webp";
+import app_ban from "./assets/app/s1-ban.webp";
+import app_home from "./assets/app/s1-home.webp";
+import app_sched from "./assets/app/s2-sched.webp";
+import app_head from "./assets/app/s3-head.webp";
+import app_list from "./assets/app/s3-list.webp";
 import React from "react";
 import { useLanding } from "./useLanding";
 import { NEWS, newsUrl } from "./news";
@@ -186,20 +193,14 @@ export default function App() {
       <div style={{display: "flex", flexWrap: "wrap", gap: "24px"}}>
 
       <article style={{flex: "1 1 320px", minWidth: "0", background: "var(--card)", borderRadius: "28px", padding: "28px", display: "flex", flexDirection: "column", gap: "20px"}}>
-      <div style={{height: "240px", borderRadius: "20px", background: "var(--t-green)", display: "flex", alignItems: "center", justifyContent: "center", position: "relative", overflow: "hidden"}}>
-      <div style={{position: "relative", width: "236px", height: "120px"}}>
-      <span className="hw-c" style={{position: "absolute", left: "0", top: "0", width: "28px", height: "28px", borderLeft: "3px solid #111111", borderTop: "3px solid #111111", borderRadius: "10px 0 0 0"}}></span>
-      <span className="hw-c" style={{position: "absolute", right: "0", top: "0", width: "28px", height: "28px", borderRight: "3px solid #111111", borderTop: "3px solid #111111", borderRadius: "0 10px 0 0"}}></span>
-      <span className="hw-c" style={{position: "absolute", left: "0", bottom: "0", width: "28px", height: "28px", borderLeft: "3px solid #111111", borderBottom: "3px solid #111111", borderRadius: "0 0 0 10px"}}></span>
-      <span className="hw-c" style={{position: "absolute", right: "0", bottom: "0", width: "28px", height: "28px", borderRight: "3px solid #111111", borderBottom: "3px solid #111111", borderRadius: "0 0 10px 0"}}></span>
-      <div style={{position: "absolute", left: "22px", right: "22px", top: "36px", height: "48px", background: "var(--card)", borderRadius: "10px", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden"}}>
-      <span className="hw-mvin" style={{position: "absolute", inset: "0", display: "flex", alignItems: "center", justifyContent: "center"}}><span className="hw-type" style={{display: "block", overflow: "hidden", whiteSpace: "nowrap", fontFamily: "ui-monospace, Menlo, monospace", fontWeight: "700", fontSize: "15px", letterSpacing: "0.06em"}}>{t("JTNB11HK503214521")}</span></span>
-      <span className="hw-mplate" style={{position: "absolute", inset: "0", display: "flex", alignItems: "center", justifyContent: "center"}}><span style={{display: "flex", alignItems: "stretch", height: "32px", border: "2px solid #111111", borderRadius: "7px", overflow: "hidden", background: "#ffffff"}}><span style={{width: "26px", borderRight: "2px solid #111111", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "2px"}}><span aria-hidden="true" style={{display: "flex", flexDirection: "column", width: "14px", height: "9px", borderRadius: "1px", overflow: "hidden"}}><span style={{flex: "1", background: "#0092bc"}}></span><span style={{flex: "1", background: "#e4002b"}}></span><span style={{flex: "1", background: "#00af66"}}></span></span><span style={{fontSize: "8px", fontWeight: "800", color: "#111111"}}>{t("AZ")}</span></span><span style={{display: "flex", alignItems: "center", padding: "0 10px", minWidth: "104px"}}><span className="hw-ptype" style={{display: "block", overflow: "hidden", whiteSpace: "nowrap", fontFamily: "ui-monospace, Menlo, monospace", fontWeight: "800", fontSize: "16px", letterSpacing: "0.06em", color: "#111111"}}>{t("99-ES-002")}</span></span></span></span>
-      </div>
-      <div aria-hidden="true" style={{position: "absolute", left: "50%", top: "-46px", transform: "translateX(-50%)", display: "flex", background: "#ffffff", borderRadius: "999px", padding: "3px", boxShadow: "0 10px 24px -16px rgba(0,0,0,0.4)"}}><span className="hw-tg" style={{position: "absolute", left: "3px", top: "3px", width: "56px", height: "26px", borderRadius: "999px", background: v.accent}}></span><span style={{position: "relative", width: "56px", height: "26px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "12px", fontWeight: "800", color: "#111111"}}>{t("VIN")}</span><span style={{position: "relative", width: "56px", height: "26px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "12px", fontWeight: "800", color: "#111111"}}>{t("Plate")}</span></div>
-      <span className="hw-scanline" style={{position: "absolute", left: "8px", right: "8px", top: "10px", height: "3px", borderRadius: "3px", background: "var(--band)"}}></span>
-      </div>
-      <span className="hw-ok" style={{position: "absolute", left: "50%", bottom: "22px", display: "flex", alignItems: "center", gap: "8px", background: "var(--band)", color: "#ffffff", borderRadius: "999px", padding: "8px 14px 8px 8px", fontSize: "13px", fontWeight: "600", whiteSpace: "nowrap"}}><span style={{width: "22px", height: "22px", borderRadius: "50%", background: v.accent, display: "flex", alignItems: "center", justifyContent: "center"}}><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#111111" strokeWidth="3.5" strokeLinecap="round" aria-hidden="true"><path d="M5 12l4 4 10-10"></path></svg></span>{t("Toyota Camry 2020 found")}</span>
+      <div className="ph-box" style={{background: "var(--t-green)"}}>
+      <div className="ph" aria-hidden="true"><span className="ph-island"></span><div className="ph-screen">
+      <img className="ph-f ph-f1" src={app_plate0} alt="" loading="lazy" decoding="async" />
+      <img className="ph-f ph-f2" src={app_plate1} alt="" loading="lazy" decoding="async" />
+      <img className="ph-f ph-f3" src={app_ban} alt="" loading="lazy" decoding="async" />
+      <img className="ph-f ph-f4" src={app_home} alt="" loading="lazy" decoding="async" />
+      <span className="ph-tap ph-tap1" style={{left: "50%", top: "55%"}}></span>
+      </div></div>
       </div>
       <span style={{alignSelf: "flex-start", background: v.accent, color: "#111111", borderRadius: "999px", padding: "4px 12px", fontSize: "13px", fontWeight: "800"}}>{t("01")}</span>
       <h3 style={{margin: "0", fontFamily: "Manrope, Inter, sans-serif", fontSize: "24px", fontWeight: "800"}}>{t("Add your car")}</h3>
@@ -207,13 +208,11 @@ export default function App() {
       </article>
 
       <article style={{flex: "1 1 320px", minWidth: "0", background: "var(--card)", borderRadius: "28px", padding: "28px", display: "flex", flexDirection: "column", gap: "20px"}}>
-      <div style={{height: "240px", borderRadius: "20px", background: "var(--t-blue)", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden"}}>
-      <div style={{width: "250px", background: "var(--card)", borderRadius: "20px", padding: "16px", boxSizing: "border-box", display: "flex", flexDirection: "column", gap: "12px", boxShadow: "var(--glow-blue)"}}>
-      <div style={{display: "flex", alignItems: "center", justifyContent: "space-between"}}><span style={{fontWeight: "800", fontFamily: "Manrope, Inter, sans-serif", fontSize: "15px"}}>{t("Engine oil & filter")}</span><span className="hw-bell" style={{width: "30px", height: "30px", borderRadius: "50%", background: "var(--t-yellow)", display: "flex", alignItems: "center", justifyContent: "center"}}><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#7A5B00" strokeWidth="2" aria-hidden="true"><path d="M6 8a6 6 0 1 1 12 0c0 7 3 8 3 8H3s3-1 3-8"></path><path d="M10 20a2 2 0 0 0 4 0"></path></svg></span></div>
-      <div style={{height: "10px", borderRadius: "999px", background: "var(--soft3)", overflow: "hidden"}}><span className="hw-fill" style={{display: "block", height: "100%", borderRadius: "999px", background: "#3B82F6"}}></span></div>
-      <div style={{display: "flex", justifyContent: "space-between", fontSize: "11px", color: "var(--ink2)"}}><span>{t("118 400 km")}</span><span>{t("126 800 km")}</span></div>
-      <span className="hw-chip" style={{alignSelf: "flex-start", background: "var(--t-orange)", color: "#9A3412", borderRadius: "999px", padding: "6px 12px", fontSize: "12px", fontWeight: "700"}}>{t("Due in 1 200 km")}</span>
-      </div>
+      <div className="ph-box" style={{background: "var(--t-blue)"}}>
+      <div className="ph" aria-hidden="true"><span className="ph-island"></span><div className="ph-screen">
+      <img className="ph-zoom" src={app_sched} alt="" loading="lazy" decoding="async" />
+      <div className="ph-note"><span className="ph-note-ic"><img src={img_bec8cbd1} alt="" /></span><span className="ph-note-tx"><b>{t("Air filter")}</b><span>{t("1 738 km left. Time to book a service")}</span></span><em>{t("now")}</em></div>
+      </div></div>
       </div>
       <span style={{alignSelf: "flex-start", background: v.accent, color: "#111111", borderRadius: "999px", padding: "4px 12px", fontSize: "13px", fontWeight: "800"}}>{t("02")}</span>
       <h3 style={{margin: "0", fontFamily: "Manrope, Inter, sans-serif", fontSize: "24px", fontWeight: "800"}}>{t("Get your schedule")}</h3>
@@ -221,29 +220,11 @@ export default function App() {
       </article>
 
       <article style={{flex: "1 1 320px", minWidth: "0", background: "var(--card)", borderRadius: "28px", padding: "28px", display: "flex", flexDirection: "column", gap: "20px"}}>
-      <div style={{height: "240px", borderRadius: "20px", background: "var(--t-peach)", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden"}}>
-      <div style={{width: "258px", background: "var(--card)", borderRadius: "20px", padding: "16px", boxSizing: "border-box", display: "flex", flexDirection: "column", gap: "12px", boxShadow: "var(--glow-orange)"}}>
-      <div style={{display: "flex", flexDirection: "column", lineHeight: "1.3"}}><span style={{fontSize: "14px", fontWeight: "800"}}>{t("HyperServis")}</span><span style={{fontSize: "11px", color: "var(--muted)"}}>{t("Saturday, 22 November")}</span></div>
-      <div style={{position: "relative", width: "226px", height: "68px"}}>
-      <span style={{position: "absolute", left: "0px", top: "0px", width: "70px", height: "30px", borderRadius: "999px", background: "var(--soft2)"}}></span>
-      <span style={{position: "absolute", left: "78px", top: "0px", width: "70px", height: "30px", borderRadius: "999px", background: "var(--soft2)"}}></span>
-      <span style={{position: "absolute", left: "156px", top: "0px", width: "70px", height: "30px", borderRadius: "999px", background: "var(--soft2)"}}></span>
-      <span style={{position: "absolute", left: "0px", top: "38px", width: "70px", height: "30px", borderRadius: "999px", background: "var(--soft2)"}}></span>
-      <span style={{position: "absolute", left: "78px", top: "38px", width: "70px", height: "30px", borderRadius: "999px", background: "var(--soft2)"}}></span>
-      <span style={{position: "absolute", left: "156px", top: "38px", width: "70px", height: "30px", borderRadius: "999px", background: "var(--soft2)"}}></span>
-      <span className="hw-pick" style={{position: "absolute", left: "0", top: "0", width: "70px", height: "30px", borderRadius: "999px", background: v.accent}}></span>
-      <span style={{position: "absolute", left: "0px", top: "0px", width: "70px", height: "30px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "12px", fontWeight: "600", color: "var(--ink2)", zIndex: "1"}}>{t("09:00")}</span>
-      <span style={{position: "absolute", left: "78px", top: "0px", width: "70px", height: "30px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "12px", fontWeight: "600", color: "var(--ink2)", zIndex: "1"}}>{t("10:00")}</span>
-      <span style={{position: "absolute", left: "156px", top: "0px", width: "70px", height: "30px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "12px", fontWeight: "600", color: "var(--ink2)", zIndex: "1"}}>{t("11:30")}</span>
-      <span style={{position: "absolute", left: "0px", top: "38px", width: "70px", height: "30px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "12px", fontWeight: "600", color: "var(--ink2)", zIndex: "1"}}>{t("13:00")}</span>
-      <span style={{position: "absolute", left: "78px", top: "38px", width: "70px", height: "30px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "12px", fontWeight: "700", color: "#111111", zIndex: "1"}}>{t("15:00")}</span>
-      <span style={{position: "absolute", left: "156px", top: "38px", width: "70px", height: "30px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "12px", fontWeight: "600", color: "var(--ink2)", zIndex: "1"}}>{t("16:30")}</span>
-      </div>
-      <div style={{position: "relative", height: "38px"}}>
-      <span className="hw-btn1" style={{position: "absolute", inset: "0", borderRadius: "999px", background: "var(--band)", color: "#ffffff", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "13px", fontWeight: "600"}}>{t("Confirm 10:00")}</span>
-      <span className="hw-btn2" style={{position: "absolute", inset: "0", borderRadius: "999px", background: v.accent, color: "#111111", display: "flex", alignItems: "center", justifyContent: "center", gap: "6px", fontSize: "13px", fontWeight: "800"}}>{t("Booked ✓")}</span>
-      </div>
-      </div>
+      <div className="ph-box" style={{background: "var(--t-peach)"}}>
+      <div className="ph" aria-hidden="true"><span className="ph-island"></span><div className="ph-screen">
+      <img className="ph-head" src={app_head} alt="" loading="lazy" decoding="async" />
+      <div className="ph-listwin"><img className="ph-list" src={app_list} alt="" loading="lazy" decoding="async" /><span className="ph-tap ph-tap3" style={{left: "50%", top: "13%"}}></span></div>
+      </div></div>
       </div>
       <span style={{alignSelf: "flex-start", background: v.accent, color: "#111111", borderRadius: "999px", padding: "4px 12px", fontSize: "13px", fontWeight: "800"}}>{t("03")}</span>
       <h3 style={{margin: "0", fontFamily: "Manrope, Inter, sans-serif", fontSize: "24px", fontWeight: "800"}}>{t("Book a service")}</h3>
